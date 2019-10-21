@@ -1,15 +1,43 @@
 html{
   body{
     background-color: red;
-
+margin: 0;
+    font-family: IRANSans_light;
 position: relative;
 
     header{
       position: fixed;
       top:0;
       right:0;
-      z-index: 1000;
+      z-index: 1090;
       width: 100%;
+    }
+    a{
+      text-decoration: none;
+      cursor: pointer;
+      &:focus{
+        border: 0;
+        outline: 0;
+        box-shadow: 0 0 0;
+      }
+    }
+    button{
+      cursor: pointer;
+      border: 0;
+      background-color: transparent;
+      &:focus{
+        border: 0;
+        outline: 0;
+        box-shadow: 0 0 0;
+      }
     }
   }
 }
+/*z-index
+Octagonal:10
+
+
+
+
+
+*/

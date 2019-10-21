@@ -94,6 +94,15 @@ console.log($('.active_position').attr('id'));
     }
 });*!/
 */
+$(window).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 99) {
+        $('.navigation').addClass('style-navigation');
+
+    } else if (y < 99) {
+        $('.navigation').removeClass('style-navigation');
+    }
+});
 // Code By Webdevtrick ( https://webdevtrick.com )
 var $header_top = $('.header-top');
 var $nav = $('nav');
@@ -127,3 +136,12 @@ $('#fullpage').fullpage({
 
 
 });
+/*$(window).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 99) {
+        $('.navigation').addClass('style-navigation');
+
+    } else if (y < 99) {
+        $('.navigation').removeClass('style-navigation');
+    }
+});*/

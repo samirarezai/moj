@@ -56,13 +56,13 @@
   -o-transition: $args;
   transition: $args;
 }
-@mixin transform($degree){
+/*@mixin transform($degree){
   -moz-transform: rotate($degree);
   -ms-transform: rotate($degree);
   -o-transform: rotate($degree);
   -webkit-transform: rotate($degree);
   transform: rotate($degree);
-}
+}*/
 @mixin media-max($break-large){
   @media screen and (max-width: $break-large) {
     @content

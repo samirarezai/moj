@@ -9657,6 +9657,13 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/*@mixin transform($degree){
+  -moz-transform: rotate($degree);
+  -ms-transform: rotate($degree);
+  -o-transform: rotate($degree);
+  -webkit-transform: rotate($degree);
+  transform: rotate($degree);
+}*/
 /*
 input,
 textarea {
@@ -9667,16 +9674,19 @@ textarea {
 */
 /*=============key============*/
 /*=============bootstrap============*/
-html body {
-  background-color: red;
-  position: relative;
-}
-html body header {
-  position: fixed;
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #343888;
+  background: #191c49;
+  background: -webkit-linear-gradient(left, #191c49, #3f4a8d);
+  background: linear-gradient(to right, #191c49, #3f4a8d);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   top: 0;
   right: 0;
-  z-index: 1000;
-  width: 100%;
 }
 
 /**
@@ -9911,6 +9921,401 @@ html.fp-enabled,
 
 #fp-nav ul li .fp-tooltip.left {
   left: 20px;
+}
+
+html body {
+  background-color: red;
+  margin: 0;
+  font-family: IRANSans_light;
+  position: relative;
+}
+html body header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1090;
+  width: 100%;
+}
+html body a {
+  text-decoration: none;
+  cursor: pointer;
+}
+html body a:focus {
+  border: 0;
+  outline: 0;
+  box-shadow: 0 0 0;
+}
+html body button {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+html body button:focus {
+  border: 0;
+  outline: 0;
+  box-shadow: 0 0 0;
+}
+
+/*z-index
+Octagonal:10
+
+
+
+
+
+*/
+.navigation {
+  width: 100%;
+  position: relative;
+  background-color: #282e64;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+@media screen and (max-width: 992px) {
+  .navigation {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+  }
+}
+.navigation .navbar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 0;
+}
+@media screen and (max-width: 992px) {
+  .navigation .navbar {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+  }
+}
+.navigation .navbar .navbar-nav .nav-item {
+  padding: 0;
+  margin: 10px 0;
+}
+.navigation .navbar .navbar-nav .nav-item .nav-link {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.7rem;
+  padding: 10px 15px;
+  margin: 0;
+}
+.navigation .change-language {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 20px 50px 20px 0;
+}
+@media screen and (max-width: 992px) {
+  .navigation .change-language {
+    left: 0;
+  }
+}
+.navigation .change-language .btn-change-language {
+  font-size: 1rem;
+  color: #000;
+  font-weight: 800;
+  line-height: 1.1rem;
+  padding: 0px 15px;
+  margin: 0;
+  background-color: #fff;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+body.fp-viewing-firstSection .navigation {
+  background-color: transparent;
+}
+
+/*=============key============*/
+/*=============bootstrap============*/
+/*@mixin transform($degree){
+  -moz-transform: rotate($degree);
+  -ms-transform: rotate($degree);
+  -o-transform: rotate($degree);
+  -webkit-transform: rotate($degree);
+  transform: rotate($degree);
+}*/
+/*
+input,
+textarea {
+  @include input-placeholder {
+    color: $grey;
+  }
+}
+*/
+.box-home {
+  text-align: right;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+}
+.box-home .wrap-home {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+}
+.box-home .wrap-home .home {
+  height: 80%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.box-home .wrap-home .home .welcome {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 992px) {
+  .box-home .wrap-home .home .welcome {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 2.5rem;
+    margin-bottom: 25px;
+  }
+}
+.box-home .wrap-home .home .explain {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.9rem;
+  text-align: justify;
+  padding: 5px 15px;
+}
+@media screen and (max-width: 992px) {
+  .box-home .wrap-home .home .explain {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.7rem;
+  }
+}
+.box-home .wrap-home .home .image-logo-card img {
+  width: 100%;
+  height: auto;
+  max-width: 330px;
+}
+.box-home .wrap-home .octagonWrap {
+  width: 100px;
+  height: 100px;
+  float: left;
+  position: absolute;
+  overflow: hidden;
+  z-index: 10;
+  bottom: 50px;
+  left: 120px;
+}
+.box-home .wrap-home .octagon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background: transparent;
+  border: 2px solid #f500a5;
+}
+.box-home .wrap-home .octagon::before {
+  position: absolute;
+  /* There needs to be a negative value here to cancel
+   * out the width of the border. It's currently -3px,
+   * but if the border were 5px, then it'd be -5px.
+   */
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  transform: rotate(45deg);
+  content: "";
+  border: inherit;
+}
+.box-home .wrap-home .octagonWrap2 {
+  width: 50px;
+  height: 50px;
+  float: left;
+  position: absolute;
+  overflow: hidden;
+  z-index: 10;
+  bottom: 100px;
+  left: 202px;
+}
+.box-home .wrap-home .octagon2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background: transparent;
+  border: 2px solid #00b6ec;
+}
+.box-home .wrap-home .octagon2::before {
+  position: absolute;
+  /* There needs to be a negative value here to cancel
+   * out the width of the border. It's currently -3px,
+   * but if the border were 5px, then it'd be -5px.
+   */
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+  border: inherit;
+}
+.box-home .wrap-home .Hexagons {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 10;
+  bottom: 12px;
+  right: -25px;
+}
+.box-home .wrap-home .Triangle {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 10;
+  top: 76px;
+  left: 152px;
+}
+.box-home .wrap-home .home-background {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+}
+
+.systems {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
