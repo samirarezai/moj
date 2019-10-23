@@ -16,21 +16,24 @@
     overflow: hidden;
 
     .home {
-      height: 80%;
+      position: relative;
+      height: 100%;
+      z-index: 11;
       @include flex(row, nowrap, center, center);
-      .welcome {
 
-        @include font-source-sans(3rem, #fff, 700, 2.5rem);
+      .welcome {
+        font-family: aviny, IRANSans_light;
+        @include font-source-sans(5rem, #fff, 700, 5.5rem);
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         @include media-max($L) {
           @include font-source-sans(2.5rem, #fff, 700, 2.5rem);
-          margin-bottom: 25px;
+          margin-bottom: 20px;
         }
       }
 
       .explain {
-        @include font-source-sans(1.2rem, #fff, 600, 1.9rem);
+        @include font-source-sans(1.2rem, #fff, 500, 1.9rem);
 
         text-align: justify;
         padding: 5px 15px;
@@ -38,90 +41,114 @@
           @include font-source-sans(1.1rem, #fff, 600, 1.7rem);
         }
       }
-      .image-logo-card{
-img{
-  width: 100%;
-  height: auto;
-  max-width: 330px;
-}
+
+      .image-logo-card {
+        img {
+          width: 100%;
+          height: auto;
+          max-width: 330px;
+        }
       }
     }
+
     .octagonWrap {
-      width:100px;
-      height:100px;
+      width: 100px;
+      height: 100px;
       float: left;
-      position:absolute;
+      position: absolute;
       overflow: hidden;
       z-index: 10;
       bottom: 50px;
       left: 120px;
     }
+
     .octagon {
       position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       overflow: hidden;
       transform: rotate(45deg);
       background: transparent;
-      border: 2px solid #f500a5;
+      border: 2px solid $color-violet;
       &::before {
         position: absolute;
         /* There needs to be a negative value here to cancel
          * out the width of the border. It's currently -3px,
          * but if the border were 5px, then it'd be -5px.
          */
-        top: -2px; right: -2px; bottom: -2px; left: -2px;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
         transform: rotate(45deg);
         content: '';
         border: inherit;
       }
     }
+
     .octagonWrap2 {
-      width:50px;
-      height:50px;
+      width: 50px;
+      height: 50px;
       float: left;
-      position:absolute;
+      position: absolute;
       overflow: hidden;
       z-index: 10;
       bottom: 100px;
       left: 202px;
     }
+
     .octagon2 {
       position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       overflow: hidden;
       transform: rotate(45deg);
       background: transparent;
       border: 2px solid #00b6ec;
+
       &::before {
         position: absolute;
         /* There needs to be a negative value here to cancel
          * out the width of the border. It's currently -3px,
          * but if the border were 5px, then it'd be -5px.
          */
-        top: -2px; right: -2px; bottom: -2px; left: -2px;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
         @include transform(rotate(45deg));
         content: '';
         border: inherit;
       }
     }
-    .Hexagons{
-      width:220px;
-      height:220px;
-      position:absolute;
+
+    .Hexagons {
+      width: 220px;
+      height: 220px;
+      position: absolute;
       overflow: hidden;
       z-index: 10;
       bottom: 12px;
-      right:-25px;
+      right: -25px;
+      @include media-max($L) {
+        bottom: -30px;
+      }
     }
-    .Triangle{
-      width:40px;
-      height:40px;
-      position:absolute;
+
+    .Triangle {
+      width: 40px;
+      height: 40px;
+      position: absolute;
       overflow: hidden;
       z-index: 10;
       top: 76px;
       left: 152px;
     }
+
     .home-background {
       position: absolute;
       width: 100%;

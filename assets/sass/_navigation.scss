@@ -4,13 +4,13 @@
   background-color: rgba(40,46,100,1);
   @include transition(all .3s);
   @include flex(row, nowrap, center, center);
-  @include media-max($L){
+  @include media-max($M){
     @include flex(row, nowrap, center, flex-start);
   }
 .navbar{
   @include flex(row, nowrap, center, center);
   padding: 0;
-  @include media-max($L){
+  @include media-max($M){
     @include flex(column, nowrap, center, flex-start);
   }
   .navbar-nav{
@@ -21,7 +21,9 @@
         @include font-source-sans(1rem, #fff, 500, 1.7rem);
         padding: 10px 15px;
         margin: 0;
+        @include transition(all .3s);
       }
+
     }
   }
 }
@@ -31,7 +33,7 @@
     top:0;
     padding: 0;
     margin: 20px 50px 20px 0;
-    @include media-max($L){
+    @include media-max($M){
       left: 0;
     }
     .btn-change-language{
@@ -44,16 +46,43 @@
   }
 }
 body.fp-viewing-firstSection{
-
-}
-body.fp-viewing-firstSection{
   .navigation{
     background-color: transparent;
   }
-
+  .navigation .navbar .navbar-nav .nav-item{
+    .nav-link.firstSection{
+      color: $color-pink;
+    }
+  }
 }
 
-
-
+body.fp-viewing-secondSection{
+  .navigation .navbar .navbar-nav .nav-item{
+    .nav-link.secondSection{
+     color: $color-pink;
+    }
+  }
+}
+body.fp-viewing-thirdSection{
+  .navigation .navbar .navbar-nav .nav-item{
+    .nav-link.thirdSection{
+      color: $color-pink;
+    }
+  }
+}
+body.fp-viewing-fourthSection-0{
+  .navigation .navbar .navbar-nav .nav-item{
+    .nav-link.fourthSection{
+      color: $color-pink;
+    }
+  }
+}
+body.fp-viewing-fifthSection{
+  .navigation .navbar .navbar-nav .nav-item{
+    .nav-link.fifthSection{
+      color: $color-pink;
+    }
+  }
+}
 
 

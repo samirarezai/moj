@@ -1,5 +1,125 @@
-.systems{
+.box-systems {
+  padding-top: 67px;
   width: 100%;
   height: 100%;
   background-color: #fff;
+  text-align: center;
+
+  .wrap-systems {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .system {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 11;
+      @include flex(row, nowrap, center, center);
+
+      .system-box-text {
+        display: none;
+        .system-title {
+          font-family: IRANSans_bold;
+          @include font-source-sans(2rem, $color-pink, 900, 2.5rem);
+          margin-bottom: 40px;
+          @include media-max($L) {
+            @include font-source-sans(1.4rem, $color-pink, 800, 2.2rem);
+          }
+        }
+
+        .system-explain {
+          @include font-source-sans(1rem, #000, 500, 1.7rem);
+          margin: 0 0 10px;
+        }
+      }
+
+      .system-box-text.hidden {
+        display: none;
+      }
+      .system-box-text.show-box {
+        display:block;
+      }
+      .system-box-image {
+        img {
+          max-width: 300px;
+        }
+      }
+
+
+    }
+
+    .box-circle {
+      position: relative;
+
+      .circle-image {
+        display: inline-block;
+        border-radius: 50%;
+        min-width: 20px;
+        min-height: 20px;
+        padding: 30px;
+        background-color: transparent;
+        color: white;
+        text-align: center;
+        box-sizing: content-box;
+        white-space: nowrap;
+        border: 4px dashed $color-blue;
+
+        img {
+          display: inline-block;
+          width: 100%;
+          height: auto;
+          max-width: 450px;
+        }
+      }
+
+      .system-btn#system_1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 12;
+      }
+
+      .system-btn#system_2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 12;
+      }
+
+      .system-btn#system_3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 12;
+      }
+
+      .system-btn#system_4 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 12;
+      }
+    }
+    .system-shape-right {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      img {
+        height: 100%;
+      }
+    }
+    .system-shape-left {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+
+      svg {
+        height: 100%;
+      }
+    }
+  }
 }

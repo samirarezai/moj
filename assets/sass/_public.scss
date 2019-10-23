@@ -1,6 +1,6 @@
 html{
   body{
-    background-color: red;
+    background-color: #fff;
 margin: 0;
     font-family: IRANSans_light;
 position: relative;
@@ -15,6 +15,7 @@ position: relative;
     a{
       text-decoration: none;
       cursor: pointer;
+      color: #fff;
       &:focus{
         border: 0;
         outline: 0;
@@ -33,9 +34,15 @@ position: relative;
     }
   }
 }
+#fp-nav{
+  display: none;
+}
+.right{
+  display: none;
+}
 /*z-index
 Octagonal:10
-
+home:11;
 
 
 
