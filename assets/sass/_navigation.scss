@@ -19,9 +19,12 @@
       margin: 10px 0;
       .nav-link{
         @include font-source-sans(1rem, #fff, 500, 1.7rem);
-        padding: 10px 15px;
+        padding: 10px 20px;
         margin: 0;
         @include transition(all .3s);
+        @include media-min($L){
+          padding: 10px 40px;
+        }
       }
 
     }
@@ -56,28 +59,28 @@ body.fp-viewing-firstSection{
   }
 }
 
-body.fp-viewing-secondSection{
+body.fp-viewing-secondSection,body.fp-viewing-secondSection-0{
   .navigation .navbar .navbar-nav .nav-item{
     .nav-link.secondSection{
      color: $color-pink;
     }
   }
 }
-body.fp-viewing-thirdSection{
+body.fp-viewing-thirdSection,body.fp-viewing-thirdSection-0{
   .navigation .navbar .navbar-nav .nav-item{
     .nav-link.thirdSection{
       color: $color-pink;
     }
   }
 }
-body.fp-viewing-fourthSection-0{
+body.fp-viewing-fourthSection,body.fp-viewing-fourthSection-0{
   .navigation .navbar .navbar-nav .nav-item{
     .nav-link.fourthSection{
       color: $color-pink;
     }
   }
 }
-body.fp-viewing-fifthSection{
+body.fp-viewing-fifthSection,body.fp-viewing-fifthSection-0{
   .navigation .navbar .navbar-nav .nav-item{
     .nav-link.fifthSection{
       color: $color-pink;

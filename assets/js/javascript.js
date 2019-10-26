@@ -128,7 +128,7 @@ $header_top.find('a').on('click', function () {
 });
 
 $('#fullpage').fullpage({
-    sectionsColor: ['#3dcfa1', '#348899', '#ff8b20', '#ff5757', '#ffd03c'],
+    sectionsColor: ['#fff', '#fff', '#ff8b20', '#fff', '#fff'],
     sectionSelector: '.vertical-scrolling',
     navigation: true,
     slidesNavigation: true,
@@ -181,6 +181,7 @@ setInterval(function () {
 }, 6000);
 */
 
+/*
 var count = '2';
 var countNumber = 2;
 $('.system-btn').click(function () {
@@ -211,5 +212,6 @@ setInterval(function() {
     countNumber++;
     count = countNumber.toString();
 }, 10000);
+*/
 
 
