@@ -1,0 +1,28 @@
+.box-activities {
+  width: 100%;
+  height: 100%;
+  padding-top: 67px;
+
+  .wrap-activities {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .activities {
+
+    }
+
+    .background-activities {
+      text-align: left;
+      direction: ltr;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 10%;
+      svg {
+        height: 100%;
+      }
+    }
+  }
+}

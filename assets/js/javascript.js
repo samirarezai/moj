@@ -128,7 +128,7 @@ $header_top.find('a').on('click', function () {
 });
 
 $('#fullpage').fullpage({
-    sectionsColor: ['#fff', '#fff', '#ff8b20', '#fff', '#fff'],
+    sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
     sectionSelector: '.vertical-scrolling',
     navigation: true,
     slidesNavigation: true,

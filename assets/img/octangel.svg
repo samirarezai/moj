@@ -1,0 +1,33 @@
+ <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 381 330">
+                        <defs>
+                            <style>.cls-1 {
+                                fill: transparent;
+                            }
+
+                            .cls-2 {
+                                fill: #bf00bf;
+                            }</style>
+                        </defs>
+                        <title>shape_2</title>
+                        <g id="Polygon_14" data-name="Polygon 14">
+                            <path class="cls-1" d="M316.7,26.5l95.3,165-95.3,165H126.2L31,191.5l95.3-165Z"
+                                  transform="translate(-31 -26.5)"/>
+                            <path class="cls-2"
+                                  d="M128,29.5l-93.5,162,93.5,162H315l93.5-162L315,29.5H128m-1.8-3H316.7l95.3,165-95.3,165H126.2L31,191.5Z"
+                                  transform="translate(-31 -26.5)"/>
+                        </g>
+                        <g id="Polygon_15" data-name="Polygon 15">
+                            <path class="cls-1" d="M306.7,44.5l85.3,147-85.3,147H136.2L51,191.5l85.3-147Z"
+                                  transform="translate(-31 -26.5)"/>
+                            <path class="cls-2"
+                                  d="M138,47.5l-83.5,144,83.5,144H305l83.5-144L305,47.5H138m-1.8-3H306.7l85.3,147-85.3,147H136.2L51,191.5Z"
+                                  transform="translate(-31 -26.5)"/>
+                        </g>
+                        <g id="Polygon_16" data-name="Polygon 16">
+                            <path class="cls-1" d="M295.2,63.5l73.8,128-73.8,128H147.7L74,191.5l73.8-128Z"
+                                  transform="translate(-31 -26.5)"/>
+                            <path class="cls-2"
+                                  d="M149.5,66.5l-72,125,72,125h144l72-125-72-125h-144m-1.8-3H295.2l73.8,128-73.8,128H147.7L74,191.5Z"
+                                  transform="translate(-31 -26.5)"/>
+                        </g>
+                    </svg>

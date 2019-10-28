@@ -1,6 +1,13 @@
 .box-slider{
   height: 100%;
   width: 100%;
+  padding-top: 67px;
   background:#fff url("../img/cloud.svg") no-repeat center center;
   background-size: cover;
+  .wrap-slider{
+    height: 100%;
+    width: 100%;
+
+  }
+
 }
