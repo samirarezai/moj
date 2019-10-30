@@ -214,4 +214,26 @@ setInterval(function() {
 }, 10000);
 */
 
-
+$('#property_btn').click(function () {
+    var name_class = '.activities-property-' + $(this).attr('data-name');
+    $('.background-activities').addClass('click-item ');
+    $('.activities-app').addClass('hidden');
+    $(name_class).removeClass('hidden');
+    $('.head-property').addClass('fadeInDown');
+    $('.box-pack-property1').addClass('fadeInRight');
+    $('.box-pack-property2').addClass('fadeInLeft');
+    $('.image-body-property').addClass(' fadeInUp');
+    $('.image-body-property').addClass(' fadeInUp');
+    setTimeout(function () {
+        $('.head-property').removeClass('fadeInDown');
+        $('.box-pack-property').removeClass('fadeInRight');
+        $('.box-pack-property2').removeClass('fadeInLeft');
+        $('.image-body-property').removeClass(' fadeInUp');
+        $('.image-body-property').removeClass(' fadeInUp');
+    }, 1800);
+});
+$('#back_button').click(function () {
+    $('.background-activities').removeClass('click-item ');
+    $('.activities-app').removeClass('hidden');
+    $(this).parent().parent().addClass('hidden');
+});

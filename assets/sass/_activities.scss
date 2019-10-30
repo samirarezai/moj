@@ -8,8 +8,205 @@
     height: 100%;
     position: relative;
 
-    .activities {
+    .activities-app {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 10;
 
+      .activities-slider-first {
+        width: 100%;
+        height: 100%;
+
+        .carousel {
+          width: 100%;
+          height: 100%;
+          position: static;
+
+          .carousel-inner {
+            width: 82%;
+            height: 100%;
+
+            .carousel-item {
+              width: 100%;
+              height: 100%;
+
+              .activities-item {
+                width: 100%;
+                height: 100%;
+                @include flex(row, nowrap, center, center);
+                margin: auto;
+
+                .image-item {
+                  img {
+                    width: 100%;
+                    height: auto;
+                  }
+                }
+
+                .image-app {
+                  text-align: center;
+
+                  img {
+                    width: 100%;
+                    height: auto;
+                    max-width: 200px;
+                  }
+                }
+
+                .title {
+                  text-align: center;
+                  font-family: IRANSans;
+                  @include font-source-sans(1.7rem, #fff, 500, 2.3rem);
+                  margin-bottom: 40px;
+                  @include media-max($L) {
+                    @include font-source-sans(1.4rem, #fff, 500, 2rem);
+                  }
+                }
+
+                .caption {
+                  text-align: justify;
+                  @include font-source-sans(1rem, #fff, 500, 1.7rem);
+                }
+
+                .activities-buttons {
+                  @include flex(row, nowrap, center, center);
+
+                  .activities-btn {
+                    background-color: #988db5;
+                    padding: 10px 25px;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    margin: 5px 10px;
+                    min-width: 120px;
+                    @include radius(30px);
+                  }
+                }
+              }
+
+            }
+          }
+
+          .square-number {
+            position: absolute;
+            left: 0;
+            top: 10%;
+            width: 80px;
+            height: 80px;
+            background-color: #0c5460;
+            @include radius(20px);
+            @include transform(rotate(45deg));
+          }
+
+          .carousel-indicators {
+            height: 100%;
+            margin: 0;
+            @include flex(column, nowrap, center, center);
+
+            li {
+              @include transition(all .3s);
+              opacity: 1;
+              border-right: 4px solid #aeaeae;
+              border-bottom: 0px solid #aeaeae;
+              border-top: 0px solid #aeaeae;
+              height: 60px;
+              @include flex(column, nowrap, center, center);
+            }
+
+            li.active {
+              border-right: 4px solid $color-dark-blue;
+            }
+          }
+        }
+      }
+    }
+
+    .activities-app.hidden {
+      display: none;
+    }
+
+    .activities-property {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 5px;
+      @include flex(column, nowrap, center, center);
+.head-property{
+  @include animation (.2s,.70s);
+  .image-property {
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 100px;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-family: IRANSans;
+    @include font-source-sans(1.7rem, #fff, 500, 2.3rem);
+    margin: 15px 0;
+    @include media-max($L) {
+      @include font-source-sans(1.4rem, #fff, 500, 2rem);
+    }
+  }
+
+  .installation {
+    @include font-source-sans(.9rem, #ff95cf, 500, 1.5rem);
+    margin-bottom: 40px;
+  }
+}
+
+      .box-pack-property {
+        @include flex(column, nowrap, center, space-between);
+        @include animation (.7s,1s);
+        .pack-property {
+          @include flex(row, nowrap, center, center);
+          .text-property {
+            .title {
+              @include font-source-sans(1rem, #fff, 500, 1.8rem);
+            }
+
+            .explain {
+              font-family: IRANSans_light;
+              @include font-source-sans(.8rem, #dddfe6, 300, 1.7rem);
+            }
+          }
+
+          .icon-body-property {
+
+img{
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+}
+          }
+        }
+      }
+      .image-body-property{
+        @include animation (.7s,1s);
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .wrap-back-button{
+        position: absolute;
+        top:80px;
+        left: 80px;
+.back-button{
+  width: 50px;
+  height: 50px;
+background-color: #ffffff40;
+  color: #fff;
+  @include radius(50%);
+}
+      }
+    }
+    .activities-property.hidden{
+      display: none;
     }
 
     .background-activities {
@@ -19,7 +216,24 @@
       width: 100%;
       height: 100%;
       bottom: 0;
-      left: 10%;
+      left: 7%;
+      z-index: 1;
+      @include transition(all .3s);
+
+      svg {
+        height: 100%;
+      }
+    }
+
+    .background-activities.click-item {
+      text-align: left;
+      direction: ltr;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: -27px;
+
       svg {
         height: 100%;
       }
