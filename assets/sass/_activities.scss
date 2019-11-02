@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   padding-top: 67px;
+  position: relative;
 
   .wrap-activities {
     width: 100%;
@@ -12,7 +13,7 @@
       width: 100%;
       height: 100%;
       position: relative;
-      z-index: 10;
+      z-index: 11;
 
       .activities-slider-first {
         width: 100%;
@@ -35,7 +36,6 @@
                 width: 100%;
                 height: 100%;
                 @include flex(row, nowrap, center, center);
-                margin: auto;
 
                 .image-item {
                   img {
@@ -46,19 +46,52 @@
 
                 .image-app {
                   text-align: center;
+                  margin-bottom: 25px;
+                  .side-image-app {
+                    position: relative;
+                    padding: 8px;
+                    display: inline-block;
 
-                  img {
-                    width: 100%;
-                    height: auto;
-                    max-width: 200px;
+                    img {
+                      width: 100%;
+                      height: auto;
+                      max-width: 120px;
+                    }
+                    &::after {
+                      content: '';
+                      width: 30%;
+                      height: 30%;
+                      background-color: transparent;
+                      border-left: 4px solid #fff;
+                      border-bottom: 4px solid #fff;
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      z-index: 12;
+                    }
+
+                    &::before {
+                      content: '';
+                      width: 30%;
+                      height: 30%;
+                      background-color: transparent;
+                      border-right: 4px solid #fff;
+                      border-bottom: 4px solid #fff;
+                      position: absolute;
+                      bottom: 0;
+                      right: 0;
+                      z-index: 12;
+                    }
                   }
+
+
                 }
 
                 .title {
                   text-align: center;
                   font-family: IRANSans;
                   @include font-source-sans(1.7rem, #fff, 500, 2.3rem);
-                  margin-bottom: 40px;
+                  margin-bottom: 25px;
                   @include media-max($L) {
                     @include font-source-sans(1.4rem, #fff, 500, 2rem);
                   }
@@ -71,6 +104,7 @@
 
                 .activities-buttons {
                   @include flex(row, nowrap, center, center);
+                  margin-bottom: 30px;
 
                   .activities-btn {
                     background-color: #988db5;
@@ -111,6 +145,7 @@
               border-top: 0px solid #aeaeae;
               height: 60px;
               @include flex(column, nowrap, center, center);
+              background-color: transparent;
             }
 
             li.active {
@@ -129,41 +164,75 @@
       width: 100%;
       height: 100%;
       position: relative;
-      z-index: 10;
+      z-index: 11;
       text-align: center;
       padding: 5px;
       @include flex(column, nowrap, center, center);
-.head-property{
-  @include animation (.2s,.70s);
-  .image-property {
-    img {
-      width: 100%;
-      height: auto;
-      max-width: 100px;
-    }
-  }
 
-  .title {
-    text-align: center;
-    font-family: IRANSans;
-    @include font-source-sans(1.7rem, #fff, 500, 2.3rem);
-    margin: 15px 0;
-    @include media-max($L) {
-      @include font-source-sans(1.4rem, #fff, 500, 2rem);
-    }
-  }
+      .head-property {
+        @include animation (.2s, .70s);
 
-  .installation {
-    @include font-source-sans(.9rem, #ff95cf, 500, 1.5rem);
-    margin-bottom: 40px;
-  }
-}
+        .image-property {
+          .side-image-property{
+            position: relative;
+            padding: 6px;
+            display: inline-block;
+            img {
+              width: 100%;
+              height: auto;
+              max-width: 100px;
+            }
+            &::after {
+              content: '';
+              width: 30%;
+              height: 30%;
+              background-color: transparent;
+              border-left: 3px solid #fff;
+              border-bottom: 3px solid #fff;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              z-index: 12;
+            }
+
+            &::before {
+              content: '';
+              width: 30%;
+              height: 30%;
+              background-color: transparent;
+              border-right: 3px solid #fff;
+              border-bottom: 3px solid #fff;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              z-index: 12;
+            }
+          }
+
+        }
+
+        .title {
+          text-align: center;
+          font-family: IRANSans;
+          @include font-source-sans(1.7rem, #fff, 500, 2.3rem);
+          margin: 15px 0;
+          @include media-max($L) {
+            @include font-source-sans(1.4rem, #fff, 500, 2rem);
+          }
+        }
+
+        .installation {
+          @include font-source-sans(.9rem, #ff95cf, 500, 1.5rem);
+          margin-bottom: 40px;
+        }
+      }
 
       .box-pack-property {
         @include flex(column, nowrap, center, space-between);
-        @include animation (.7s,1s);
+
         .pack-property {
           @include flex(row, nowrap, center, center);
+
           .text-property {
             .title {
               @include font-source-sans(1rem, #fff, 500, 1.8rem);
@@ -177,35 +246,169 @@
 
           .icon-body-property {
 
-img{
-  max-width: 150px;
-  width: 100%;
-  height: auto;
-}
+            img {
+              max-width: 150px;
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          &:nth-child(1) {
+            @include animation (.7s, .7s);
+          }
+
+          &:nth-child(2) {
+            @include animation (.8s, .7s);
+          }
+
+          &:nth-child(3) {
+            @include animation (.9s, .7s);
+          }
+
+          &:nth-child(4) {
+            @include animation (1s, .7s);
+          }
+        }
+
+      }
+
+      .image-body-property {
+        @include animation (.7s, 1s);
+
+        img {
+          width: 100%;
+          height: auto;
+          max-width: 360px;
+        }
+      }
+
+      .wrap-back-button {
+        position: absolute;
+        top: 80px;
+        left: 80px;
+
+        .back-button {
+          width: 50px;
+          height: 50px;
+          background-color: #ffffff40;
+          color: #fff;
+          @include radius(50%);
+        }
+      }
+    }
+
+    .activities-property.hidden {
+      display: none;
+    }
+
+    .activities-gallery {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 11;
+      text-align: center;
+      padding: 10px;
+      @include flex(column, nowrap, center, center);
+
+      .head-gallery {
+        @include animation (.2s, .70s);
+
+        .image-gallery {
+          .side-image-gallery{
+            position: relative;
+            padding: 6px;
+            display: inline-block;
+            img {
+              width: 100%;
+              height: auto;
+              max-width: 100px;
+            }
+            &::after {
+              content: '';
+              width: 30%;
+              height: 30%;
+              background-color: transparent;
+              border-left: 3px solid #fff;
+              border-bottom: 3px solid #fff;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              z-index: 12;
+            }
+
+            &::before {
+              content: '';
+              width: 30%;
+              height: 30%;
+              background-color: transparent;
+              border-right: 3px solid #fff;
+              border-bottom: 3px solid #fff;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              z-index: 12;
+            }
+          }
+        }
+
+        .title {
+          text-align: center;
+          font-family: IRANSans;
+          @include font-source-sans(1.7rem, #fff, 500, 2.3rem);
+          margin: 15px 0;
+          @include media-max($L) {
+            @include font-source-sans(1.4rem, #fff, 500, 2rem);
+          }
+        }
+
+        .installation {
+          @include font-source-sans(.9rem, #ff95cf, 500, 1.5rem);
+          margin-bottom: 40px;
+        }
+      }
+
+      .owl-carousel {
+        .item {
+          background-color: gray;
+          animation-duration: 1s !important;
+
+          .owl-image {
+            width: 100%;
+            text-align: center;
+            @include flex(column, nowrap, center, center);
+
+            img {
+              text-align: center;
+              width: 100%;
+              height: auto;
+              max-width: 320px;
+            }
+          }
+
+          .owl-box-text {
+            .owl-text {
+              margin: 0;
+            }
           }
         }
       }
-      .image-body-property{
-        @include animation (.7s,1s);
-        img{
-          width: 100%;
-          height: auto;
+
+      .wrap-back-button {
+        position: absolute;
+        top: 80px;
+        left: 80px;
+
+        .back-button {
+          width: 50px;
+          height: 50px;
+          background-color: #ffffff40;
+          color: #fff;
+          @include radius(50%);
         }
       }
-      .wrap-back-button{
-        position: absolute;
-        top:80px;
-        left: 80px;
-.back-button{
-  width: 50px;
-  height: 50px;
-background-color: #ffffff40;
-  color: #fff;
-  @include radius(50%);
-}
-      }
     }
-    .activities-property.hidden{
+
+    .activities-gallery.hidden {
       display: none;
     }
 
@@ -213,30 +416,144 @@ background-color: #ffffff40;
       text-align: left;
       direction: ltr;
       position: absolute;
-      width: 100%;
-      height: 100%;
-      bottom: 0;
+      width: 96%;
+      height: 96%;
+      bottom: 2%;
       left: 7%;
-      z-index: 1;
-      @include transition(all .3s);
-
-      svg {
-        height: 100%;
-      }
+      z-index: 2;
+      @include transition(all .7s);
+      background-color: $color-dark-blue;
+      @include gradient(horizontal, $color-dark-blue, #404D8C);
+      @include radius(100px);
+      @include transform(rotate(2deg));
     }
 
     .background-activities.click-item {
+      left: 2%;
+      @include transform(rotate(1deg));
+
+    }
+
+    .background-border-activities {
       text-align: left;
       direction: ltr;
       position: absolute;
-      width: 100%;
-      height: 100%;
-      bottom: 0;
-      left: -27px;
+      width: 98%;
+      height: 95%;
+      bottom: 2%;
+      left: 6%;
+      z-index: 1;
+      @include transition(all .7s);
+      background-color: transparent;
+      border: 2px solid #dedfe4;
+      @include radius(100px);
+      @include transform(rotate(-3deg));
+    }
 
-      svg {
-        height: 100%;
-      }
+    .background-border-activities.click-item-border {
+      left: 2%;
+      @include transform(rotate(-4deg));
+    }
+
+
+  }
+
+  .activities-Square {
+    position: absolute;
+    bottom: 56%;
+    left: 9%;
+    width: 0;
+    height: 0;
+    border-left: 60px solid rgba(241, 198, 261, .5);
+    border-bottom: 60px solid transparent;
+    @include transform(rotate(200deg));
+  }
+
+  .activities-Square2 {
+    position: absolute;
+    bottom: 59%;
+    left: 9%;
+    width: 0;
+    height: 0;
+    border-left: 35px solid rgba(199, 213, 241, 0.5);
+    border-bottom: 35px solid transparent;
+    @include transform(rotate(5deg));
+
+  }
+
+  .octagonWrap {
+    width: 200px;
+    height: 200px;
+    float: left;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    bottom: 0px;
+    right: -10px;
+  }
+
+  .octagon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    background: transparent;
+    border: 2px solid $color-violet;
+
+    &::before {
+      position: absolute;
+      /* There needs to be a negative value here to cancel
+       * out the width of the border. It's currently -3px,
+       * but if the border were 5px, then it'd be -5px.
+       */
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
+      transform: rotate(45deg);
+      content: '';
+      border: inherit;
+    }
+  }
+
+  .octagonWrap2 {
+    width: 120px;
+    height: 120px;
+    float: left;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    bottom: 100px;
+    right: -50px;
+  }
+
+  .octagon2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    background: transparent;
+    border: 2px solid #00b6ec;
+
+    &::before {
+      position: absolute;
+      /* There needs to be a negative value here to cancel
+       * out the width of the border. It's currently -3px,
+       * but if the border were 5px, then it'd be -5px.
+       */
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
+      @include transform(rotate(45deg));
+      content: '';
+      border: inherit;
     }
   }
 }

@@ -213,27 +213,62 @@ setInterval(function() {
     count = countNumber.toString();
 }, 10000);
 */
-
-$('#property_btn').click(function () {
+/*==================owlCarousel====================*/
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items:3,
+    loop:true,
+    margin:10,
+    nav:true,
+    rtl:true,
+    center: true,
+    autoplay:3000,
+    slideSpeed : 200,
+    autoplayHoverPause:true,
+    scrollPerPage: true,
+    smartSpeed: 1000,
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:2
+        },
+        1200:{
+            items:3
+        }
+    }
+});
+/*==================click====================*/
+$('.property_btn').click(function () {
     var name_class = '.activities-property-' + $(this).attr('data-name');
     $('.background-activities').addClass('click-item ');
+    $('.background-border-activities').addClass('click-item-border ');
     $('.activities-app').addClass('hidden');
     $(name_class).removeClass('hidden');
     $('.head-property').addClass('fadeInDown');
-    $('.box-pack-property1').addClass('fadeInRight');
-    $('.box-pack-property2').addClass('fadeInLeft');
-    $('.image-body-property').addClass(' fadeInUp');
-    $('.image-body-property').addClass(' fadeInUp');
+    $('.pack-property').addClass('fadeInUp');
+    $('.image-body-property').addClass('fadeInRight');
     setTimeout(function () {
         $('.head-property').removeClass('fadeInDown');
-        $('.box-pack-property').removeClass('fadeInRight');
-        $('.box-pack-property2').removeClass('fadeInLeft');
-        $('.image-body-property').removeClass(' fadeInUp');
-        $('.image-body-property').removeClass(' fadeInUp');
-    }, 1800);
+        $('.pack-property').removeClass('fadeInUp');
+        $('.image-body-property').removeClass('fadeInRight');
+    }, 2000);
 });
-$('#back_button').click(function () {
+$('.gallery_btn').click(function () {
+    var name_class = '.activities-gallery-' + $(this).attr('data-name');
+    $('.background-activities').addClass('click-item ');
+    $('.background-border-activities').addClass('click-item-border ');
+    $('.activities-app').addClass('hidden');
+    $(name_class).removeClass('hidden');
+    $('.head-gallery').addClass('fadeInDown');
+    setTimeout(function () {
+        $('.head-property').removeClass('fadeInDown');
+    }, 1000);
+});
+$('.back-button').click(function () {
     $('.background-activities').removeClass('click-item ');
+    $('.background-border-activities').removeClass('click-item-border ');
     $('.activities-app').removeClass('hidden');
     $(this).parent().parent().addClass('hidden');
 });

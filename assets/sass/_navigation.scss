@@ -1,7 +1,7 @@
 .navigation{
   width: 100%;
   position: relative;
-  background-color: rgba(40,46,100,1);
+  background-color: rgba(255,255,255,.6);
   @include transition(all .3s);
   @include flex(row, nowrap, center, center);
   @include media-max($M){
@@ -60,32 +60,50 @@ body.fp-viewing-firstSection{
 }
 
 body.fp-viewing-secondSection,body.fp-viewing-secondSection-0{
-  .navigation .navbar .navbar-nav .nav-item{
+  .navigation{
+  .navbar .navbar-nav .nav-item{
+    .nav-link{
+      color: $color-dark-blue;
+    }
     .nav-link.secondSection{
      color: $color-pink;
     }
-  }
+  }}
 }
 body.fp-viewing-thirdSection,body.fp-viewing-thirdSection-0{
-  .navigation .navbar .navbar-nav .nav-item{
+  .navigation{
+.navbar .navbar-nav .nav-item{
+  .nav-link{
+    color: $color-dark-blue;
+  }
     .nav-link.thirdSection{
       color: $color-pink;
     }
-  }
+  }}
 }
 body.fp-viewing-fourthSection,body.fp-viewing-fourthSection-0{
-  .navigation .navbar .navbar-nav .nav-item{
-    .nav-link.fourthSection{
-      color: $color-pink;
+  .navigation{
+    .navbar .navbar-nav .nav-item{
+      .nav-link{
+        color: $color-dark-blue;
+      }
+
+      .nav-link.fourthSection{
+        color: $color-pink;
+      }
     }
   }
 }
 body.fp-viewing-fifthSection,body.fp-viewing-fifthSection-0{
-  .navigation .navbar .navbar-nav .nav-item{
-    .nav-link.fifthSection{
-      color: $color-pink;
+  .navigation{
+    background-color: $color-dark-blue;
+    .navbar .navbar-nav .nav-item{
+      .nav-link.fifthSection{
+        color: $color-pink;
+      }
     }
   }
+
 }
 
 

@@ -42,7 +42,7 @@
               .system-box-text {
                 @include animation (.5s,2s);
                 .system-title {
-                  font-family: IRANSans_bold;
+                  font-family: IRANSans;
                   @include font-source-sans(2rem, $color-pink, 900, 2.5rem);
                   margin-bottom: 40px;
                   @include media-max($L) {

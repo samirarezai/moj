@@ -12714,6 +12714,210 @@ textarea {
     animation-iteration-count: 1 !important;
   }
 }
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+.owl-carousel, .owl-carousel .owl-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  direction: rtl;
+}
+
+.owl-carousel {
+  display: none;
+  width: 100%;
+  z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+}
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-item, .owl-carousel .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-item {
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+  display: block;
+}
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+.owl-carousel .animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.owl-height {
+  transition: height 0.5s ease-in-out;
+}
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.owl-carousel .owl-item .owl-lazy:not([src]), .owl-carousel .owl-item .owl-lazy[src^=""] {
+  max-height: 0;
+}
+
+.owl-carousel .owl-item img.owl-lazy {
+  transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(owl.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.1s ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-play-icon, .owl-carousel .owl-video-playing .owl-video-tn {
+  display: none;
+}
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 0.4s ease;
+}
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
 #particles-js {
   position: absolute;
   width: 100%;
@@ -13016,7 +13220,7 @@ system-shape-left:9
 .navigation {
   width: 100%;
   position: relative;
-  background-color: #282e64;
+  background-color: rgba(255, 255, 255, 0.6);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -13180,18 +13384,30 @@ body.fp-viewing-firstSection .navigation .navbar .navbar-nav .nav-item .nav-link
   color: #d800e3;
 }
 
+body.fp-viewing-secondSection .navigation .navbar .navbar-nav .nav-item .nav-link, body.fp-viewing-secondSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link {
+  color: #191d48;
+}
 body.fp-viewing-secondSection .navigation .navbar .navbar-nav .nav-item .nav-link.secondSection, body.fp-viewing-secondSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link.secondSection {
   color: #d800e3;
 }
 
+body.fp-viewing-thirdSection .navigation .navbar .navbar-nav .nav-item .nav-link, body.fp-viewing-thirdSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link {
+  color: #191d48;
+}
 body.fp-viewing-thirdSection .navigation .navbar .navbar-nav .nav-item .nav-link.thirdSection, body.fp-viewing-thirdSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link.thirdSection {
   color: #d800e3;
 }
 
+body.fp-viewing-fourthSection .navigation .navbar .navbar-nav .nav-item .nav-link, body.fp-viewing-fourthSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link {
+  color: #191d48;
+}
 body.fp-viewing-fourthSection .navigation .navbar .navbar-nav .nav-item .nav-link.fourthSection, body.fp-viewing-fourthSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link.fourthSection {
   color: #d800e3;
 }
 
+body.fp-viewing-fifthSection .navigation, body.fp-viewing-fifthSection-0 .navigation {
+  background-color: #191d48;
+}
 body.fp-viewing-fifthSection .navigation .navbar .navbar-nav .nav-item .nav-link.fifthSection, body.fp-viewing-fifthSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link.fifthSection {
   color: #d800e3;
 }
@@ -13487,7 +13703,7 @@ textarea {
   /* this prevents the animation from restarting! */
 }
 .box-systems .wrap-systems .system .system-carousel .carousel .carousel-inner .carousel-item .system-box-text .system-title {
-  font-family: IRANSans_bold;
+  font-family: IRANSans;
   font-size: 2rem;
   color: #d800e3;
   font-weight: 900;
@@ -13705,6 +13921,7 @@ textarea {
   width: 100%;
   height: 100%;
   padding-top: 67px;
+  position: relative;
 }
 .box-activities .wrap-activities {
   width: 100%;
@@ -13715,7 +13932,7 @@ textarea {
   width: 100%;
   height: 100%;
   position: relative;
-  z-index: 10;
+  z-index: 11;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first {
   width: 100%;
@@ -13760,7 +13977,6 @@ textarea {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  margin: auto;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-item img {
   width: 100%;
@@ -13768,11 +13984,41 @@ textarea {
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-app {
   text-align: center;
+  margin-bottom: 25px;
 }
-.box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-app img {
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-app .side-image-app {
+  position: relative;
+  padding: 8px;
+  display: inline-block;
+}
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-app .side-image-app img {
   width: 100%;
   height: auto;
-  max-width: 200px;
+  max-width: 120px;
+}
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-app .side-image-app::after {
+  content: "";
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  border-left: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+}
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-app .side-image-app::before {
+  content: "";
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 12;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .title {
   text-align: center;
@@ -13781,7 +14027,7 @@ textarea {
   color: #fff;
   font-weight: 500;
   line-height: 2.3rem;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 @media screen and (max-width: 992px) {
   .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .title {
@@ -13822,6 +14068,7 @@ textarea {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  margin-bottom: 30px;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .activities-buttons .activities-btn {
   background-color: #988db5;
@@ -13911,6 +14158,7 @@ textarea {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  background-color: transparent;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-indicators li.active {
   border-right: 4px solid #191d48;
@@ -13922,7 +14170,7 @@ textarea {
   width: 100%;
   height: 100%;
   position: relative;
-  z-index: 10;
+  z-index: 11;
   text-align: center;
   padding: 5px;
   display: -webkit-box;
@@ -13971,10 +14219,39 @@ textarea {
   animation-fill-mode: both;
   /* this prevents the animation from restarting! */
 }
-.box-activities .wrap-activities .activities-property .head-property .image-property img {
+.box-activities .wrap-activities .activities-property .head-property .image-property .side-image-property {
+  position: relative;
+  padding: 6px;
+  display: inline-block;
+}
+.box-activities .wrap-activities .activities-property .head-property .image-property .side-image-property img {
   width: 100%;
   height: auto;
   max-width: 100px;
+}
+.box-activities .wrap-activities .activities-property .head-property .image-property .side-image-property::after {
+  content: "";
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+}
+.box-activities .wrap-activities .activities-property .head-property .image-property .side-image-property::before {
+  content: "";
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 12;
 }
 .box-activities .wrap-activities .activities-property .head-property .title {
   text-align: center;
@@ -14024,26 +14301,6 @@ textarea {
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
-  -webkit-animation-delay: 0.7s;
-  -webkit-animation-duration: 1s;
-  /*-webkit-animation-name: $animation;*/
-  -webkit-animation-fill-mode: both;
-  /* this prevents the animation from restarting! */
-  -moz-animation-delay: 0.7s;
-  -moz-animation-duration: 1s;
-  /*  -moz-animation-name: $animation;*/
-  -moz-animation-fill-mode: both;
-  /* this prevents the animation from restarting! */
-  -o-animation-delay: 0.7s;
-  -o-animation-duration: 1s;
-  /* -o-animation-name: $animation;*/
-  -o-animation-fill-mode: both;
-  /* this prevents the animation from restarting! */
-  animation-delay: 0.7s;
-  animation-duration: 1s;
-  /*  animation-name: $animation;*/
-  animation-fill-mode: both;
-  /* this prevents the animation from restarting! */
 }
 .box-activities .wrap-activities .activities-property .box-pack-property .pack-property {
   display: -webkit-box;
@@ -14088,6 +14345,94 @@ textarea {
   width: 100%;
   height: auto;
 }
+.box-activities .wrap-activities .activities-property .box-pack-property .pack-property:nth-child(1) {
+  -webkit-animation-delay: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.7s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.7s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.7s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+}
+.box-activities .wrap-activities .activities-property .box-pack-property .pack-property:nth-child(2) {
+  -webkit-animation-delay: 0.8s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.8s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.8s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.8s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+}
+.box-activities .wrap-activities .activities-property .box-pack-property .pack-property:nth-child(3) {
+  -webkit-animation-delay: 0.9s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.9s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.9s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.9s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+}
+.box-activities .wrap-activities .activities-property .box-pack-property .pack-property:nth-child(4) {
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 1s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 1s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 1s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+}
 .box-activities .wrap-activities .activities-property .image-body-property {
   -webkit-animation-delay: 0.7s;
   -webkit-animation-duration: 1s;
@@ -14113,6 +14458,7 @@ textarea {
 .box-activities .wrap-activities .activities-property .image-body-property img {
   width: 100%;
   height: auto;
+  max-width: 360px;
 }
 .box-activities .wrap-activities .activities-property .wrap-back-button {
   position: absolute;
@@ -14131,35 +14477,343 @@ textarea {
 .box-activities .wrap-activities .activities-property.hidden {
   display: none;
 }
+.box-activities .wrap-activities .activities-gallery {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 11;
+  text-align: center;
+  padding: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.box-activities .wrap-activities .activities-gallery .head-gallery {
+  -webkit-animation-delay: 0.2s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.2s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.2s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.2s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+}
+.box-activities .wrap-activities .activities-gallery .head-gallery .image-gallery .side-image-gallery {
+  position: relative;
+  padding: 6px;
+  display: inline-block;
+}
+.box-activities .wrap-activities .activities-gallery .head-gallery .image-gallery .side-image-gallery img {
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+}
+.box-activities .wrap-activities .activities-gallery .head-gallery .image-gallery .side-image-gallery::after {
+  content: "";
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+}
+.box-activities .wrap-activities .activities-gallery .head-gallery .image-gallery .side-image-gallery::before {
+  content: "";
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 12;
+}
+.box-activities .wrap-activities .activities-gallery .head-gallery .title {
+  text-align: center;
+  font-family: IRANSans;
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 2.3rem;
+  margin: 15px 0;
+}
+@media screen and (max-width: 992px) {
+  .box-activities .wrap-activities .activities-gallery .head-gallery .title {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+}
+.box-activities .wrap-activities .activities-gallery .head-gallery .installation {
+  font-size: 0.9rem;
+  color: #ff95cf;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-bottom: 40px;
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel .item {
+  background-color: gray;
+  animation-duration: 1s !important;
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel .item .owl-image {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel .item .owl-image img {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel .item .owl-box-text .owl-text {
+  margin: 0;
+}
+.box-activities .wrap-activities .activities-gallery .wrap-back-button {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+}
+.box-activities .wrap-activities .activities-gallery .wrap-back-button .back-button {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff40;
+  color: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.box-activities .wrap-activities .activities-gallery.hidden {
+  display: none;
+}
 .box-activities .wrap-activities .background-activities {
   text-align: left;
   direction: ltr;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
+  width: 96%;
+  height: 96%;
+  bottom: 2%;
   left: 7%;
-  z-index: 1;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.box-activities .wrap-activities .background-activities svg {
-  height: 100%;
+  z-index: 2;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  background-color: #191d48;
+  background: #191d48;
+  background: -webkit-linear-gradient(left, #191d48, #404D8C);
+  background: linear-gradient(to right, #191d48, #404D8C);
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
 }
 .box-activities .wrap-activities .background-activities.click-item {
+  left: 2%;
+  -moz-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+.box-activities .wrap-activities .background-border-activities {
   text-align: left;
   direction: ltr;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: -27px;
+  width: 98%;
+  height: 95%;
+  bottom: 2%;
+  left: 6%;
+  z-index: 1;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  background-color: transparent;
+  border: 2px solid #dedfe4;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
 }
-.box-activities .wrap-activities .background-activities.click-item svg {
-  height: 100%;
+.box-activities .wrap-activities .background-border-activities.click-item-border {
+  left: 2%;
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+.box-activities .activities-Square {
+  position: absolute;
+  bottom: 56%;
+  left: 9%;
+  width: 0;
+  height: 0;
+  border-left: 60px solid rgba(241, 198, 255, 0.5);
+  border-bottom: 60px solid transparent;
+  -moz-transform: rotate(200deg);
+  -o-transform: rotate(200deg);
+  -ms-transform: rotate(200deg);
+  -webkit-transform: rotate(200deg);
+  transform: rotate(200deg);
+}
+.box-activities .activities-Square2 {
+  position: absolute;
+  bottom: 59%;
+  left: 9%;
+  width: 0;
+  height: 0;
+  border-left: 35px solid rgba(199, 213, 241, 0.5);
+  border-bottom: 35px solid transparent;
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.box-activities .octagonWrap {
+  width: 200px;
+  height: 200px;
+  float: left;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  bottom: 0px;
+  right: -10px;
+}
+.box-activities .octagon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background: transparent;
+  border: 2px solid #f500a5;
+}
+.box-activities .octagon::before {
+  position: absolute;
+  /* There needs to be a negative value here to cancel
+   * out the width of the border. It's currently -3px,
+   * but if the border were 5px, then it'd be -5px.
+   */
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  transform: rotate(45deg);
+  content: "";
+  border: inherit;
+}
+.box-activities .octagonWrap2 {
+  width: 120px;
+  height: 120px;
+  float: left;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  bottom: 100px;
+  right: -50px;
+}
+.box-activities .octagon2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background: transparent;
+  border: 2px solid #00b6ec;
+}
+.box-activities .octagon2::before {
+  position: absolute;
+  /* There needs to be a negative value here to cancel
+   * out the width of the border. It's currently -3px,
+   * but if the border were 5px, then it'd be -5px.
+   */
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+  border: inherit;
 }
 
 .box-slider {
@@ -14172,6 +14826,60 @@ textarea {
 .box-slider .wrap-slider {
   height: 100%;
   width: 100%;
+}
+.box-slider .wrap-slider .carousel {
+  height: 100%;
+  width: 100%;
+}
+.box-slider .wrap-slider .carousel .carousel-indicators {
+  height: 100%;
+  width: 100%;
+}
+.box-slider .wrap-slider .carousel .carousel-inner {
+  height: 100%;
+  width: 100%;
+}
+.box-slider .wrap-slider .carousel .carousel-inner .carousel-item {
+  height: 100%;
+  width: 100%;
+}
+.box-slider .wrap-slider .carousel .carousel-inner .carousel-item .slider-image {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.box-slider .wrap-slider .carousel .carousel-inner .carousel-item .slider-image .side-slider-image {
+  width: 35%;
+  background-color: #fff;
+}
+.box-slider .wrap-slider .carousel .carousel-inner .carousel-item .slider-image .side-slider-image img {
+  width: 100%;
+  height: auto;
+}
+.box-slider .wrap-slider .carousel .carousel-inner .carousel-item .carousel-caption {
+  bottom: 50px;
 }
 
 .connection {
@@ -14208,7 +14916,7 @@ textarea {
   color: #fff;
 }
 .connection .connection-box .connection-title {
-  font-family: IRANSans_bold;
+  font-family: IRANSans;
   font-size: 2rem;
   color: #fff;
   font-weight: 900;

@@ -7,7 +7,40 @@
   .wrap-slider{
     height: 100%;
     width: 100%;
+.carousel{
+  height: 100%;
+  width: 100%;
+  .carousel-indicators{
+    height: 100%;
+    width: 100%;
 
+  }
+  .carousel-inner{
+    height: 100%;
+    width: 100%;
+    .carousel-item{
+      height: 100%;
+      width: 100%;
+      .slider-image{
+        height: 100%;
+        width: 100%;
+        @include flex(row, nowrap, center, center);
+        .side-slider-image{
+          width: 35%;
+          background-color: #fff;
+          img{
+          width: 100%;
+            height: auto;
+          }
+        }
+
+      }
+.carousel-caption{
+  bottom: 50px;
+}
+    }
+  }
+}
   }
 
 }
