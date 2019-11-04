@@ -37,16 +37,33 @@
                 height: 100%;
                 @include flex(row, nowrap, center, center);
 
-                .image-item {
-                  img {
-                    width: 100%;
-                    height: auto;
+                .box-image-item {
+                  position: relative;
+
+                  .image-item-background {
+                    img {
+                      width: 100%;
+                      height: auto;
+                    }
+                  }
+
+                  .image-item {
+                    position: absolute;
+                    top: -20%;
+                    right: 16px;
+
+                    img {
+                      width: 100%;
+                      height: auto;
+                    }
                   }
                 }
+
 
                 .image-app {
                   text-align: center;
                   margin-bottom: 25px;
+
                   .side-image-app {
                     position: relative;
                     padding: 8px;
@@ -57,6 +74,7 @@
                       height: auto;
                       max-width: 120px;
                     }
+
                     &::after {
                       content: '';
                       width: 30%;
@@ -173,15 +191,17 @@
         @include animation (.2s, .70s);
 
         .image-property {
-          .side-image-property{
+          .side-image-property {
             position: relative;
             padding: 6px;
             display: inline-block;
+
             img {
               width: 100%;
               height: auto;
               max-width: 100px;
             }
+
             &::after {
               content: '';
               width: 30%;
@@ -232,8 +252,12 @@
 
         .pack-property {
           @include flex(row, nowrap, center, center);
+          margin-bottom: 30px;
 
           .text-property {
+            width: 310px;
+            padding: 0 10px;
+
             .title {
               @include font-source-sans(1rem, #fff, 500, 1.8rem);
             }
@@ -245,9 +269,14 @@
           }
 
           .icon-body-property {
+            background-color: #60bffc;
+            border: 2px solid #fff;
+            @include radius(50%);
+            padding: 20px;
+            margin: 5px;
 
             img {
-              max-width: 150px;
+              max-width: 40px;
               width: 100%;
               height: auto;
             }
@@ -274,11 +303,29 @@
 
       .image-body-property {
         @include animation (.7s, 1s);
+        padding: 50px 17% 0;
 
-        img {
-          width: 100%;
-          height: auto;
-          max-width: 360px;
+        .box-image-item {
+          position: relative;
+
+          .image-item-background {
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          .image-item {
+            position: absolute;
+            top: -20%;
+            right: 9px;
+
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
         }
       }
 
@@ -314,15 +361,17 @@
         @include animation (.2s, .70s);
 
         .image-gallery {
-          .side-image-gallery{
+          .side-image-gallery {
             position: relative;
             padding: 6px;
             display: inline-block;
+
             img {
               width: 100%;
               height: auto;
               max-width: 100px;
             }
+
             &::after {
               content: '';
               width: 30%;
@@ -369,25 +418,51 @@
 
       .owl-carousel {
         .item {
-          background-color: gray;
+          background-color: transparent;
           animation-duration: 1s !important;
 
           .owl-image {
             width: 100%;
             text-align: center;
             @include flex(column, nowrap, center, center);
-
+            padding: 10%;
+            @include transition(padding .3s);
+            min-height: 365px;
             img {
               text-align: center;
               width: 100%;
               height: auto;
-              max-width: 320px;
+              max-width: 250px;
             }
           }
 
           .owl-box-text {
             .owl-text {
               margin: 0;
+            }
+          }
+        }
+
+        .owl-item {
+          background-color: transparent;
+          @include transition(padding .3s);
+        }
+
+        .owl-item.center {
+          background: transparent url("../img/eslimi.svg") no-repeat center center;
+          background-size: contain;
+          @include transition(padding .3s);
+          .owl-image {
+            width: 100%;
+            text-align: center;
+            @include flex(column, nowrap, center, center);
+            padding: 0%;
+            img {
+              text-align: center;
+              width: 100%;
+              height: auto;
+              max-width: 250px;
+
             }
           }
         }

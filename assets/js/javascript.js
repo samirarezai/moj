@@ -218,7 +218,7 @@ var owl = $('.owl-carousel');
 owl.owlCarousel({
     items:3,
     loop:true,
-    margin:10,
+    margin:15,
     nav:true,
     rtl:true,
     center: true,
