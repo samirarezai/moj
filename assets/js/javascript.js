@@ -216,29 +216,30 @@ setInterval(function() {
 /*==================owlCarousel====================*/
 var owl = $('.owl-carousel');
 owl.owlCarousel({
-    items:3,
-    loop:true,
-    margin:15,
-    nav:true,
-    rtl:true,
+    items: 3,
+    loop: true,
+    margin: 0,
+    nav: true,
+    rtl: true,
     center: true,
-    autoplay:3000,
-    slideSpeed : 200,
-    autoplayHoverPause:true,
+    autoplay: 3000,
+    slideSpeed: 200,
+    autoplayHoverPause: true,
     scrollPerPage: true,
     smartSpeed: 1000,
-    responsive:{
-        0:{
-            items:1
+    responsive: {
+        0: {
+            items: 1
         },
-        768:{
-            items:2
+        768: {
+            items: 2,
         },
-        1200:{
-            items:3
+        1200: {
+            items: 3
         }
     }
 });
+
 /*==================click====================*/
 $('.property_btn').click(function () {
     var name_class = '.activities-property-' + $(this).attr('data-name');
@@ -246,14 +247,14 @@ $('.property_btn').click(function () {
     $('.background-border-activities').addClass('click-item-border ');
     $('.activities-app').addClass('hidden');
     $(name_class).removeClass('hidden');
-    $('.head-property').addClass('fadeInDown');
-    $('.pack-property').addClass('fadeInUp');
-    $('.image-body-property').addClass('fadeInRight');
-    setTimeout(function () {
-        $('.head-property').removeClass('fadeInDown');
-        $('.pack-property').removeClass('fadeInUp');
-        $('.image-body-property').removeClass('fadeInRight');
-    }, 2000);
+    /*    $('.head-property').addClass('fadeInDown');
+        $('.pack-property').addClass('fadeInUp');
+        $('.image-body-property').addClass('fadeInRight');*/
+    /*   setTimeout(function () {
+           $('.head-property').removeClass('fadeInDown');
+           $('.pack-property').removeClass('fadeInUp');
+           $('.image-body-property').removeClass('fadeInRight');
+       }, 2000);*/
 });
 $('.gallery_btn').click(function () {
     var name_class = '.activities-gallery-' + $(this).attr('data-name');
@@ -261,10 +262,10 @@ $('.gallery_btn').click(function () {
     $('.background-border-activities').addClass('click-item-border ');
     $('.activities-app').addClass('hidden');
     $(name_class).removeClass('hidden');
-    $('.head-gallery').addClass('fadeInDown');
-    setTimeout(function () {
-        $('.head-property').removeClass('fadeInDown');
-    }, 1000);
+    /*  $('.head-gallery').addClass('fadeIn');*/
+    /* setTimeout(function () {
+         $('.head-property').removeClass('fadeIn');
+     }, 1000);*/
 });
 $('.back-button').click(function () {
     $('.background-activities').removeClass('click-item ');

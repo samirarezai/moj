@@ -35,13 +35,13 @@
     right: 0;
     top:0;
     padding: 0;
-    margin: 20px 50px 20px 0;
+    margin: 20px 50px 20px 20px;
     @include media-max($M){
       left: 0;
     }
     .btn-change-language{
       @include font-source-sans(1rem, #000, 800, 1.1rem);
-      padding: 0px 15px;
+      padding: 5px 20px;
       margin: 0;
       background-color: #fff;
       @include radius(100px);

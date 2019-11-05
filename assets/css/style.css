@@ -12789,10 +12789,14 @@ textarea {
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
   background: 0 0;
-  color: inherit;
+  color: red;
   border: none;
   padding: 0 !important;
-  font: inherit;
+  font-family: IRANSans_light;
+  font-size: 150px;
+  color: #fff;
+  font-weight: lighter;
+  line-height: 2rem;
 }
 
 .owl-carousel.owl-loading {
@@ -13171,6 +13175,7 @@ html body {
   margin: 0;
   font-family: IRANSans_light;
   position: relative;
+  direction: rtl;
 }
 html body header {
   position: fixed;
@@ -13357,7 +13362,7 @@ system-shape-left:9
   right: 0;
   top: 0;
   padding: 0;
-  margin: 20px 50px 20px 0;
+  margin: 20px 50px 20px 20px;
 }
 @media screen and (max-width: 768px) {
   .navigation .change-language {
@@ -13369,7 +13374,7 @@ system-shape-left:9
   color: #000;
   font-weight: 800;
   line-height: 1.1rem;
-  padding: 0px 15px;
+  padding: 5px 20px;
   margin: 0;
   background-color: #fff;
   -webkit-border-radius: 100px;
@@ -13986,21 +13991,91 @@ textarea {
   height: auto;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .box-image-item .image-item {
-  position: absolute;
-  top: -20%;
-  right: 16px;
+  -webkit-animation-delay: 0.3s;
+  -webkit-animation-duration: 1.5s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.3s;
+  -moz-animation-duration: 1.5s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.3s;
+  -o-animation-duration: 1.5s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.3s;
+  animation-duration: 1.5s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-transition: padding 0.3s;
+  -moz-transition: padding 0.3s;
+  -ms-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s;
+  background: transparent url("../img/eslimi.svg") no-repeat center center;
+  background-size: contain;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .box-image-item .image-item img {
+  text-align: center;
   width: 100%;
   height: auto;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-app {
+  -webkit-animation-delay: 0.6s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.6s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.6s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.6s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
   text-align: center;
   margin-bottom: 25px;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-app .side-image-app {
   position: relative;
-  padding: 8px;
+  padding: 9px;
   display: inline-block;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .image-app .side-image-app img {
@@ -14013,8 +14088,8 @@ textarea {
   width: 30%;
   height: 30%;
   background-color: transparent;
-  border-left: 4px solid #fff;
-  border-bottom: 4px solid #fff;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -14025,14 +14100,34 @@ textarea {
   width: 30%;
   height: 30%;
   background-color: transparent;
-  border-right: 4px solid #fff;
-  border-bottom: 4px solid #fff;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 12;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .title {
+  -webkit-animation-delay: 0.6s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.6s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.6s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.6s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
   text-align: center;
   font-family: IRANSans;
   font-size: 1.7rem;
@@ -14050,6 +14145,26 @@ textarea {
   }
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .caption {
+  -webkit-animation-delay: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.7s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.7s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.7s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
   text-align: justify;
   font-size: 1rem;
   color: #fff;
@@ -14057,6 +14172,26 @@ textarea {
   line-height: 1.7rem;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .activities-buttons {
+  -webkit-animation-delay: 0.8s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.8s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.8s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.8s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -14080,13 +14215,16 @@ textarea {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  margin-bottom: 30px;
+  margin: 10%;
 }
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-inner .carousel-item .activities-item .activities-buttons .activities-btn {
   background-color: #988db5;
-  padding: 10px 25px;
+  padding: 8px 30px;
   border: 1px solid #fff;
+  font-size: 0.9rem;
   color: #fff;
+  font-weight: 500;
+  line-height: 1.7rem;
   margin: 5px 10px;
   min-width: 120px;
   -webkit-border-radius: 30px;
@@ -14175,6 +14313,27 @@ textarea {
 .box-activities .wrap-activities .activities-app .activities-slider-first .carousel .carousel-indicators li.active {
   border-right: 4px solid #191d48;
 }
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel.carousel-fade .carousel-item {
+  opacity: 1;
+  transition-property: opacity;
+  transform: none;
+}
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel.carousel-fade .carousel-item.active,
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel.carousel-fade .carousel-item-next.carousel-item-left,
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel.carousel-fade .carousel-item-prev.carousel-item-right {
+  z-index: 1;
+  opacity: 1;
+}
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel.carousel-fade .active.carousel-item-left,
+.box-activities .wrap-activities .activities-app .activities-slider-first .carousel.carousel-fade .active.carousel-item-right {
+  z-index: 0;
+  opacity: 1;
+  -webkit-transition: 0s 0s opacity;
+  -moz-transition: 0s 0s opacity;
+  -ms-transition: 0s 0s opacity;
+  -o-transition: 0s 0s opacity;
+  transition: 0s 0s opacity;
+}
 .box-activities .wrap-activities .activities-app.hidden {
   display: none;
 }
@@ -14233,21 +14392,21 @@ textarea {
 }
 .box-activities .wrap-activities .activities-property .head-property .image-property .side-image-property {
   position: relative;
-  padding: 6px;
+  padding: 7px;
   display: inline-block;
 }
 .box-activities .wrap-activities .activities-property .head-property .image-property .side-image-property img {
   width: 100%;
   height: auto;
-  max-width: 100px;
+  max-width: 90px;
 }
 .box-activities .wrap-activities .activities-property .head-property .image-property .side-image-property::after {
   content: "";
   width: 30%;
   height: 30%;
   background-color: transparent;
-  border-left: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -14258,8 +14417,8 @@ textarea {
   width: 30%;
   height: 30%;
   background-color: transparent;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -14268,7 +14427,7 @@ textarea {
 .box-activities .wrap-activities .activities-property .head-property .title {
   text-align: center;
   font-family: IRANSans;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   color: #fff;
   font-weight: 500;
   line-height: 2.3rem;
@@ -14276,7 +14435,7 @@ textarea {
 }
 @media screen and (max-width: 992px) {
   .box-activities .wrap-activities .activities-property .head-property .title {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: #fff;
     font-weight: 500;
     line-height: 2rem;
@@ -14287,7 +14446,7 @@ textarea {
   color: #ff95cf;
   font-weight: 500;
   line-height: 1.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 .box-activities .wrap-activities .activities-property .box-pack-property {
   display: -webkit-box;
@@ -14458,6 +14617,7 @@ textarea {
   /*  animation-name: $animation;*/
   animation-fill-mode: both;
   /* this prevents the animation from restarting! */
+  margin-bottom: 0;
 }
 .box-activities .wrap-activities .activities-property .image-body-property {
   -webkit-animation-delay: 0.7s;
@@ -14480,21 +14640,44 @@ textarea {
   /*  animation-name: $animation;*/
   animation-fill-mode: both;
   /* this prevents the animation from restarting! */
-  padding: 50px 17% 0;
-}
-.box-activities .wrap-activities .activities-property .image-body-property .box-image-item {
-  position: relative;
-}
-.box-activities .wrap-activities .activities-property .image-body-property .box-image-item .image-item-background img {
-  width: 100%;
-  height: auto;
+  padding: 25px 17% 0;
 }
 .box-activities .wrap-activities .activities-property .image-body-property .box-image-item .image-item {
-  position: absolute;
-  top: -20%;
-  right: 9px;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-transition: padding 0.3s;
+  -moz-transition: padding 0.3s;
+  -ms-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s;
+  background: transparent url("../img/eslimi.svg") no-repeat center center;
+  background-size: contain;
 }
 .box-activities .wrap-activities .activities-property .image-body-property .box-image-item .image-item img {
+  text-align: center;
   width: 100%;
   height: auto;
 }
@@ -14567,24 +14750,25 @@ textarea {
   /*  animation-name: $animation;*/
   animation-fill-mode: both;
   /* this prevents the animation from restarting! */
+  margin-top: 15px;
 }
 .box-activities .wrap-activities .activities-gallery .head-gallery .image-gallery .side-image-gallery {
   position: relative;
-  padding: 6px;
+  padding: 7px;
   display: inline-block;
 }
 .box-activities .wrap-activities .activities-gallery .head-gallery .image-gallery .side-image-gallery img {
   width: 100%;
   height: auto;
-  max-width: 100px;
+  max-width: 90px;
 }
 .box-activities .wrap-activities .activities-gallery .head-gallery .image-gallery .side-image-gallery::after {
   content: "";
   width: 30%;
   height: 30%;
   background-color: transparent;
-  border-left: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -14595,8 +14779,8 @@ textarea {
   width: 30%;
   height: 30%;
   background-color: transparent;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -14605,7 +14789,7 @@ textarea {
 .box-activities .wrap-activities .activities-gallery .head-gallery .title {
   text-align: center;
   font-family: IRANSans;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   color: #fff;
   font-weight: 500;
   line-height: 2.3rem;
@@ -14613,7 +14797,7 @@ textarea {
 }
 @media screen and (max-width: 992px) {
   .box-activities .wrap-activities .activities-gallery .head-gallery .title {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: #fff;
     font-weight: 500;
     line-height: 2rem;
@@ -14626,11 +14810,67 @@ textarea {
   line-height: 1.5rem;
   margin-bottom: 40px;
 }
-.box-activities .wrap-activities .activities-gallery .owl-carousel .item {
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container {
+  -webkit-animation-delay: 0.7s;
+  -webkit-animation-duration: 1s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.7s;
+  -moz-animation-duration: 1s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.7s;
+  -o-animation-duration: 1s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.7s;
+  animation-duration: 1s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  padding-right: 1.3%;
+  padding-left: 1.3%;
+}
+@media screen and (max-width: 992px) {
+  .box-activities .wrap-activities .activities-gallery .owl-carousel-container {
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel {
+  /*        .owl-item.center {
+
+            @include transition(padding .3s);
+            .owl-image {
+              width: 100%;
+              text-align: center;
+              @include flex(column, nowrap, center, center);
+              padding: 0%;
+              @include transition(padding .3s);
+              img {
+                text-align: center;
+                width: 100%;
+                height: auto;
+                max-width: 250px;
+
+              }
+            }
+          }*/
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .item {
   background-color: transparent;
   animation-duration: 1s !important;
+  min-height: 440px;
 }
-.box-activities .wrap-activities .activities-gallery .owl-carousel .item .owl-image {
+@media screen and (max-width: 992px) {
+  .box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .item {
+    min-height: 440px;
+  }
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .item .owl-image {
   width: 100%;
   text-align: center;
   display: -webkit-box;
@@ -14656,73 +14896,97 @@ textarea {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  padding: 10%;
-  -webkit-transition: padding 0.3s;
-  -moz-transition: padding 0.3s;
-  -ms-transition: padding 0.3s;
-  -o-transition: padding 0.3s;
-  transition: padding 0.3s;
-  min-height: 365px;
 }
-.box-activities .wrap-activities .activities-gallery .owl-carousel .item .owl-image img {
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .item .owl-image img {
   text-align: center;
   width: 100%;
   height: auto;
-  max-width: 250px;
+  max-width: 300px;
 }
-.box-activities .wrap-activities .activities-gallery .owl-carousel .item .owl-box-text .owl-text {
-  margin: 0;
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .item .owl-box-text .owl-text {
+  -webkit-animation-delay: 0.3s;
+  -webkit-animation-duration: 0.7s;
+  /*-webkit-animation-name: $animation;*/
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0.3s;
+  -moz-animation-duration: 0.7s;
+  /*  -moz-animation-name: $animation;*/
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0.3s;
+  -o-animation-duration: 0.7s;
+  /* -o-animation-name: $animation;*/
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0.3s;
+  animation-duration: 0.7s;
+  /*  animation-name: $animation;*/
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5rem;
+  display: none;
+  flex-basis: 100%;
+  align-items: center;
+  margin: 5px 10% 0;
 }
-.box-activities .wrap-activities .activities-gallery .owl-carousel .owl-item {
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .item .owl-box-text .owl-text::before, .box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .item .owl-box-text .owl-text::after {
+  content: "";
+  flex-grow: 1;
+  background: #fff;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 8px;
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .owl-item {
   background-color: transparent;
-  -webkit-transition: padding 0.3s;
-  -moz-transition: padding 0.3s;
-  -ms-transition: padding 0.3s;
-  -o-transition: padding 0.3s;
-  transition: padding 0.3s;
 }
-.box-activities .wrap-activities .activities-gallery .owl-carousel .owl-item.center {
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .owl-item .owl-text {
+  display: none;
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .owl-item > div {
+  cursor: pointer;
+  -webkit-transition: padding 0.7s ease;
+  -moz-transition: padding 0.7s ease;
+  -ms-transition: padding 0.7s ease;
+  -o-transition: padding 0.7s ease;
+  transition: padding 0.7s ease;
+  padding: 0% 20%;
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .owl-item.center > div {
   background: transparent url("../img/eslimi.svg") no-repeat center center;
-  background-size: contain;
-  -webkit-transition: padding 0.3s;
-  -moz-transition: padding 0.3s;
-  -ms-transition: padding 0.3s;
-  -o-transition: padding 0.3s;
-  transition: padding 0.3s;
+  background-size: 80% auto;
+  cursor: auto;
+  -webkit-transition: padding 0.7s ease;
+  -moz-transition: padding 0.7s ease;
+  -ms-transition: padding 0.7s ease;
+  -o-transition: padding 0.7s ease;
+  transition: padding 0.7s ease;
+  padding: 0 0;
 }
-.box-activities .wrap-activities .activities-gallery .owl-carousel .owl-item.center .owl-image {
-  width: 100%;
-  text-align: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .owl-item.center > div .owl-text {
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  padding: 0%;
 }
-.box-activities .wrap-activities .activities-gallery .owl-carousel .owl-item.center .owl-image img {
-  text-align: center;
-  width: 100%;
-  height: auto;
-  max-width: 250px;
+@media screen and (max-width: 1200px) {
+  .box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .owl-nav {
+    display: none;
+  }
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .owl-nav .owl-prev {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 75px);
+}
+.box-activities .wrap-activities .activities-gallery .owl-carousel-container .owl-carousel .owl-nav .owl-next {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 75px);
 }
 .box-activities .wrap-activities .activities-gallery .wrap-back-button {
   position: absolute;
@@ -14967,8 +15231,8 @@ textarea {
   -ms-flex-pack: center;
 }
 .box-slider .wrap-slider .carousel .carousel-inner .carousel-item .slider-image .side-slider-image {
-  width: 35%;
-  background-color: #fff;
+  width: 50%;
+  background-color: transparent;
 }
 .box-slider .wrap-slider .carousel .carousel-inner .carousel-item .slider-image .side-slider-image img {
   width: 100%;
@@ -14976,6 +15240,14 @@ textarea {
 }
 .box-slider .wrap-slider .carousel .carousel-inner .carousel-item .carousel-caption {
   bottom: 50px;
+}
+.box-slider .wrap-slider .carousel .carousel-inner .carousel-item-next:not(.carousel-item-left),
+.box-slider .wrap-slider .carousel .carousel-inner .active.carousel-item-right {
+  transform: translateX(-100%);
+}
+.box-slider .wrap-slider .carousel .carousel-inner .carousel-item-prev:not(.carousel-item-right),
+.box-slider .wrap-slider .carousel .carousel-inner .active.carousel-item-left {
+  transform: translateX(100%);
 }
 
 .connection {
