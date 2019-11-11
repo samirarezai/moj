@@ -1,5 +1,17 @@
 /*============buttons=============*/
 
+//============================responsive-menu-icon==========================//
+$('.bars').click(function () {
+    if ($(this).attr('data-open') == 'open') {
+        $(this).find('.hamburger').addClass('opened');
+        $(this).attr('data-open', 'close');
+        $('.navigation').addClass('add-style-first');
+    } else {
+        $(this).find('.hamburger').removeClass('opened');
+        $(this).attr('data-open', 'open');
+        $('.navigation').removeClass('add-style-first');
+    }
+});
 /*
 var section = $('.section');
 var window_height = $(window).height();
@@ -135,7 +147,7 @@ $('#fullpage').fullpage({
     controlArrows: false,
     anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection'],
     menu: '#menu',
-
+    responsiveWidth: 1100,
     afterLoad: function (anchorLink, index) {
         $header_top.css('background', 'rgba(0, 47, 77, .3)');
         $nav.css('background', 'rgba(0, 47, 77, .25)');
@@ -149,9 +161,36 @@ $('#fullpage').fullpage({
             $('#fp-nav').hide();
         }
     },
+    afterResponsive: function (isResponsive) {
+ /*       alert("Is responsive: " + isResponsive);*/
+        if (isResponsive == true) {
 
+            var height = window.innerHeight ? window.innerHeight : $(window).height();
+            $('.head-section').css('min-height', height);
+            $('.vertical-scrolling').css('height', 'auto');
+        }
+    }
 
 });
+/* else {
+    var height = window.innerHeight ? window.innerHeight : $(window).height();
+    $('.vertical-scrolling').css('min-height', height);
+    $('body').scrollspy({target: ".navbar", offset: 240});
+
+    $(".nav-link").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            $('.actived').removeClass('actived');
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top - 235
+            }, 600, function () {
+                $(this).addClass('actived');
+            });
+        }
+    });
+}*/
+
 
 /*$(window).scroll(function () {
     var y = $(this).scrollTop();
@@ -273,3 +312,4 @@ $('.back-button').click(function () {
     $('.activities-app').removeClass('hidden');
     $(this).parent().parent().addClass('hidden');
 });
+

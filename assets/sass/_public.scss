@@ -32,6 +32,11 @@ direction: rtl;
         box-shadow: 0 0 0;
       }
     }
+    .vertical-scrolling{
+      @include media-max(1099px){
+        height: auto;
+      }
+    }
   }
 }
 #fp-nav{

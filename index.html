@@ -14,12 +14,18 @@
 <header>
     <section class="navigation">
         <nav class="navbar navbar-expand-md bg-transparent">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler bars" data-open="open" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <!--i class="fa fa-bars"></i-->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navi">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
                 <ul class="navbar-nav">
 
@@ -41,6 +47,7 @@
                     </li>
                 </ul>
             </div>
+            </div>
         </nav>
         <div class="change-language">
             <button class="btn-change-language">EN</button>
@@ -50,7 +57,7 @@
 </header>
 
 <div id="fullpage">
-    <section class="vertical-scrolling ">
+    <section class="vertical-scrolling head-section">
         <div class="box-home">
             <div id="particles-js"></div>
 
@@ -58,14 +65,14 @@
                 <div class="home">
                     <div class="container">
                         <div class="row d-flex justify-content-center align-items-center">
-                            <div class="col-12 col-md-6  col-lg-6">
+                            <div class="col-12 col-md-6  col-lg-6 order-1 order-md-0">
                                 <h2 class="welcome">به موج خوش آمدید</h2>
                                 <h1 class="explain">شرکت موج درسال 1395 فعالیت خود را آغاز نموده است.شرکت موج بر پویایی
                                     و خلاقیت در ایده پردازی تاکید دارد.همین رویکرد موجب گردید تا در اولین سال فعالیت خود
                                     بتواند به عنوان یک شرکت «دانش بنیان» از جانب معاونت علمی و فناوری ریاست جمهوری
                                     شناخته شود</h1>
                             </div>
-                            <div class="col-12 col-md-6  col-lg-4 text-left">
+                            <div class="col-12 col-md-6  col-lg-4 text-center text-md-left order-0 order-md-1">
                                 <div class="image-logo-card">
                                     <img src="assets/img/site-logo2.svg" alt="">
                                 </div>
@@ -114,7 +121,7 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="row d-flex justify-content-center align-items-center">
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6  order-1 order-md-0">
                                                 <div class="system-box-text fadeIn">
                                                     <h2 class="system-title">سامانه های تحلیل و پردازش محتوا</h2>
                                                     <p class="system-explain">بازشناسی چهره افراد</p>
@@ -131,24 +138,24 @@
 
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6  order-0 order-md-1">
                                                 <div class="box-circle">
                                                     <div class="circle-image system_1">
                                                         <img src="assets/img/system4.png" alt="" class="flipInY">
-
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="0"
+                                                             class="system-btn system_1 active"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="1"
+                                                             class="system-btn system_2"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="2"
+                                                             class="system-btn system_3"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="3"
+                                                             class="system-btn system_4"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
                                                     </div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="0"
-                                                         class="system-btn system_1 active"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="1"
-                                                         class="system-btn system_2"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="2"
-                                                         class="system-btn system_3"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="3"
-                                                         class="system-btn system_4"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
+
                                                 </div>
                                             </div>
 
@@ -156,7 +163,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="row d-flex justify-content-center align-items-center">
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6  order-1 order-md-0">
                                                 <div class="system-box-text fadeIn">
                                                     <h2 class="system-title">سامانه های موبایلی</h2>
                                                     <p class="system-explain">بازشناسی موبایل افراد</p>
@@ -169,24 +176,24 @@
 
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6  order-0 order-md-1">
                                                 <div class="box-circle">
                                                     <div class="circle-image system_2">
                                                         <img src="assets/img/system2.png" alt="" class="flipInX">
-
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="0"
+                                                             class="system-btn system_1"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="1"
+                                                             class="system-btn system_2  active"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="2"
+                                                             class="system-btn system_3"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="3"
+                                                             class="system-btn system_4"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
                                                     </div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="0"
-                                                         class="system-btn system_1"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="1"
-                                                         class="system-btn system_2  active"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="2"
-                                                         class="system-btn system_3"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="3"
-                                                         class="system-btn system_4"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
+
                                                 </div>
                                             </div>
 
@@ -194,7 +201,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="row d-flex justify-content-center align-items-center">
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6  order-1 order-md-0">
                                                 <div class="system-box-text fadeIn">
                                                     <h2 class="system-title">پکیج های شرکت</h2>
                                                     <p class="system-explain">بازشناسی شرکت</p>
@@ -210,24 +217,24 @@
 
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6  order-0 order-md-1">
                                                 <div class="box-circle">
                                                     <div class="circle-image system_3">
                                                         <img src="assets/img/system4.png" alt="" class="flipInY">
-
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="0"
+                                                             class="system-btn system_1"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="1"
+                                                             class="system-btn system_2"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="2"
+                                                             class="system-btn system_3  active"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="3"
+                                                             class="system-btn system_4"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
                                                     </div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="0"
-                                                         class="system-btn system_1"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="1"
-                                                         class="system-btn system_2"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="2"
-                                                         class="system-btn system_3  active"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="3"
-                                                         class="system-btn system_4"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
+
                                                 </div>
                                             </div>
 
@@ -235,7 +242,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="row d-flex justify-content-center align-items-center">
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6  order-1 order-md-0">
                                                 <div class="system-box-text fadeIn">
                                                     <h2 class="system-title">نگهدارنده های انتخابی</h2>
                                                     <p class="system-explain">بررسی کوتاه مدت</p>
@@ -252,24 +259,24 @@
 
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6  order-0 order-md-1">
                                                 <div class="box-circle">
                                                     <div class="circle-image system_4">
                                                         <img src="assets/img/system4.png" alt="" class="flipInX">
-
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="0"
+                                                             class="system-btn system_1"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="1"
+                                                             class="system-btn system_2"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="2"
+                                                             class="system-btn system_3"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
+                                                        <div data-target="#carouselExampleCaptions" data-slide-to="4"
+                                                             class="system-btn system_4  active"><img
+                                                                src="assets/img/icon-chehre.png" alt=""></div>
                                                     </div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="0"
-                                                         class="system-btn system_1"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="1"
-                                                         class="system-btn system_2"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="2"
-                                                         class="system-btn system_3"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
-                                                    <div data-target="#carouselExampleCaptions" data-slide-to="4"
-                                                         class="system-btn system_4  active"><img
-                                                            src="assets/img/icon-chehre.png" alt=""></div>
+
                                                 </div>
                                             </div>
 
@@ -709,7 +716,7 @@
 <script src="assets/js/jquery-3.4.0.js"></script>
 <script src="assets/js/particles.min.js"></script>
 <script src="assets/js/app.js"></script>
-<script src='assets/js/full-page.js'></script>
+<script src='assets/js/fullpage.min.js'></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>

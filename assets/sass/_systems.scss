@@ -4,7 +4,7 @@
   height: 100%;
   background-color: #fff;
   text-align: center;
-
+  overflow: hidden;
   .wrap-systems {
     width: 100%;
     height: 100%;
@@ -37,10 +37,12 @@
               .row {
                 width: 100%;
                 height: 100%;
+                margin: 0;
               }
 
               .system-box-text {
                 @include animation (.5s,2s);
+                min-height: 480px;
                 .system-title {
                   font-family: IRANSans;
                   @include font-source-sans(2rem, $color-pink, 900, 2.5rem);
@@ -66,6 +68,7 @@
                 position: relative;
 
                 .circle-image {
+                  position: relative;
                   display: inline-block;
                   border-radius: 50%;
                   min-width: 20px;
@@ -87,8 +90,83 @@
                     @include animation (.1s,1s);
 
                   }
-                }
 
+                  .circle-image.system_1 {
+                    border-top: 4px dashed #a003f1;
+                  }
+
+                  .circle-image.system_2 {
+                    border-right: 4px dashed #a003f1;
+                  }
+
+                  .circle-image.system_3 {
+                    border-bottom: 4px dashed #a003f1;
+                  }
+
+                  .circle-image.system_4 {
+                    border-left: 4px dashed #a003f1;
+                  }
+
+                  .system-btn {
+                    background-color: #fff;
+                    border: 2px solid $color-gray;
+                    padding: 20px;
+                    @include radius(50%);
+                    @include transition(transform 0s ease, opacity 0s ease-out);
+                    @include transition(all .5s);
+                    margin: 20px;
+                    @include media-min($M) {
+                      margin: 13px;
+                    }
+                    @include media-min($L) {
+                      margin: 33px;
+                    }
+                    @include media-min($X) {
+                      margin: 45px;
+                    }
+
+                    img {
+                      max-width: 40px;
+                      width: 100%;
+                      height: auto;
+
+                    }
+                  }
+                  .system-btn.active {
+                    border: 4px solid #a003f1;
+                    padding: 18px;
+                  }
+
+                  .system-btn.system_1 {
+                    position: absolute;
+                    top: 0px;
+                    right: -16px;
+                    z-index: 12;
+                  }
+
+                  .system-btn.system_2 {
+                    position: absolute;
+                    bottom: 0px;
+                    right: -16px;
+                    z-index: 12;
+                  }
+
+                  .system-btn.system_3 {
+                    position: absolute;
+                    bottom: 0px;
+                    left: -16px;
+                    z-index: 12;
+                  }
+
+                  .system-btn.system_4 {
+
+                    position: absolute;
+                    top: 0px;
+                    left: -16px;
+                    z-index: 12;
+                  }
+                }
+/*
                 .circle-image.system_1 {
                   border-top: 4px dashed #a003f1;
                 }
@@ -163,7 +241,7 @@
                   top: 0px;
                   left: 0px;
                   z-index: 12;
-                }
+                }*/
               }
 
 
@@ -190,7 +268,7 @@
 
     .system-shape-left {
       position: absolute;
-      height: 100%;
+      height: 80%;
       top: 0px;
       left: 0;
       z-index: 9;
@@ -234,6 +312,144 @@
         width: 100%;
         height: auto;
         min-width: 150px;
+      }
+    }
+  }
+}
+.box-systems{
+  @include media-max($M){
+    .wrap-systems {
+
+      .system {
+
+        .system-carousel {
+
+          .carousel {
+            .carousel-inner {
+
+              .carousel-item {
+                .row {
+                }
+
+                .system-box-text {
+                  .system-title {
+                    @include font-source-sans(1.2rem, $color-pink, 700, 2.2rem);
+                    margin: 40px 0 10px;
+                  }
+
+                  .system-explain {
+                    font-family: IRANSans;
+                    @include font-source-sans(.88rem, #000, 500, 1.7rem);
+                  }
+                }
+
+                .system-box-image {
+                  img {
+                    max-width: 300px;
+                  }
+                }
+
+                .box-circle {
+                  position: relative;
+
+                  .circle-image {
+                    img {
+                      max-width: 230px;
+                      padding: 10%;
+                      @include animation (.1s,1s);
+                    }
+                    .circle-image.system_1 {
+                    }
+
+                    .circle-image.system_2 {
+                    }
+
+                    .circle-image.system_3 {
+                    }
+
+                    .circle-image.system_4 {
+                    }
+
+                    .system-btn {
+                      padding: 15px;
+                      @include media-min($M) {
+
+                      }
+                      @include media-min($L) {
+
+                      }
+                      @include media-min($X) {
+
+                      }
+
+                      img {
+                      }
+                    }
+
+                    .system-btn.active {
+                      padding: 13px;
+
+                    }
+
+                    .system-btn.system_1 {
+                      right: -25px;
+                    }
+
+                    .system-btn.system_2 {
+                      right: -25px;
+                    }
+
+                    .system-btn.system_3 {
+                      left: -25px;
+                    }
+
+                    .system-btn.system_4 {
+                      left: -25px;
+                    }
+                  }
+
+
+                }
+
+
+              }
+            }
+          }
+        }
+
+
+      }
+
+
+      .system-shape-right {
+        height: 30%;
+        top: 10%;
+
+        img {
+
+        }
+      }
+
+      .system-shape-left {
+        height: 25%;
+        top: 60%;
+        img {
+
+        }
+      }
+
+      .system-Square {
+display: none;
+      }
+
+      .system-Square2 {
+display: none;
+      }
+
+      .system-octagonal {
+        img {
+min-width: 70px;
+        }
       }
     }
   }

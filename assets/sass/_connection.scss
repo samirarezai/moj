@@ -5,6 +5,7 @@
   background-color: $color-dark-blue;
   text-align: center;
   @include flex(row, nowrap, center, center);
+  overflow: hidden;
   .connection-box{
     color: #fff;
 .connection-title{

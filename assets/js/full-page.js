@@ -484,8 +484,11 @@
          * Turns fullPage.js to normal scrolling mode when the viewport `width` or `height`
          * are smaller than the set limit values.
          */
+		  function isResponsiveMode(){
+           return hasClass($body, RESPONSIVE);
+        }
         function setResponsive(active){
-            var isResponsive = $body.hasClass(RESPONSIVE);
+          var isResponsive = isResponsiveMode();
 
             if(active){
                 if(!isResponsive){
@@ -495,6 +498,9 @@
                     $body.addClass(RESPONSIVE);
                     $.isFunction( options.afterResponsive ) && options.afterResponsive.call( container, active);
                 }
+			 if(options.scrollOverflow){
+                scrollBarHandler.createScrollBarForAll();
+            }
             }
             else if(isResponsive){
                 setAutoScrolling(originals.autoScrolling, 'internal');
