@@ -363,6 +363,11 @@
           background-color: #ffffff40;
           color: #fff;
           @include radius(50%);
+          img{
+            width: 100%;
+            height: auto;
+            max-width: 15px;
+          }
         }
       }
     }
@@ -575,6 +580,11 @@
           background-color: #ffffff40;
           color: #fff;
           @include radius(50%);
+          img{
+            width: 100%;
+            height: auto;
+            max-width: 15px;
+          }
         }
       }
     }

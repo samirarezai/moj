@@ -15056,6 +15056,11 @@ textarea {
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
+.box-activities .wrap-activities .activities-property .wrap-back-button .back-button img {
+  width: 100%;
+  height: auto;
+  max-width: 15px;
+}
 .box-activities .wrap-activities .activities-property.hidden {
   display: none;
 }
@@ -15363,6 +15368,11 @@ textarea {
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
+.box-activities .wrap-activities .activities-gallery .wrap-back-button .back-button img {
+  width: 100%;
+  height: auto;
+  max-width: 15px;
+}
 .box-activities .wrap-activities .activities-gallery.hidden {
   display: none;
 }
@@ -15603,13 +15613,30 @@ textarea {
 .box-slider .wrap-slider .carousel .carousel-inner .carousel-item .carousel-caption {
   bottom: 50px;
 }
-.box-slider .wrap-slider .carousel .carousel-inner .carousel-item-next:not(.carousel-item-left),
-.box-slider .wrap-slider .carousel .carousel-inner .active.carousel-item-right {
+.box-slider .wrap-slider .carousel .carousel-item-next:not(.carousel-item-left),
+.box-slider .wrap-slider .carousel .active.carousel-item-right {
   transform: translateX(-100%);
 }
-.box-slider .wrap-slider .carousel .carousel-inner .carousel-item-prev:not(.carousel-item-right),
-.box-slider .wrap-slider .carousel .carousel-inner .active.carousel-item-left {
+.box-slider .wrap-slider .carousel .carousel-item-prev:not(.carousel-item-right),
+.box-slider .wrap-slider .carousel .active.carousel-item-left {
   transform: translateX(100%);
+}
+.box-slider .wrap-slider .carousel .carousel-control-next .carousel-control-slider-next-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: transparent url("../img/next.svg") no-repeat center center;
+}
+.box-slider .wrap-slider .carousel .carousel-control-prev .carousel-control-slider-prev-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: transparent url("../img/next.svg") no-repeat center center;
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .connection {
