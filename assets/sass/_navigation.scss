@@ -31,7 +31,8 @@
       padding: 0;
       margin: 10px 0;
       .nav-link{
-        @include font-source-sans(1rem, #fff, 500, 1.7rem);
+        font-family: IRANSans;
+        @include font-source-sans(1rem, #fff,500, 1.7rem);
         padding: 10px 20px;
         margin: 0;
         @include transition(all .3s);

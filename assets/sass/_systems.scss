@@ -43,6 +43,7 @@
               .system-box-text {
                 @include animation (.5s,2s);
                 min-height: 480px;
+                @include flex(column, nowrap, center, center);
                 .system-title {
                   font-family: IRANSans;
                   @include font-source-sans(2rem, $color-pink, 900, 2.5rem);
@@ -90,7 +91,6 @@
                     @include animation (.1s,1s);
 
                   }
-
                   .circle-image.system_1 {
                     border-top: 4px dashed #a003f1;
                   }
@@ -108,6 +108,7 @@
                   }
 
                   .system-btn {
+                    cursor: pointer;
                     background-color: #fff;
                     border: 2px solid $color-gray;
                     padding: 20px;
@@ -358,17 +359,25 @@
                       padding: 10%;
                       @include animation (.1s,1s);
                     }
+
                     .circle-image.system_1 {
+                      border-top: 4px dashed #a003f1;
                     }
 
                     .circle-image.system_2 {
+                      border-right: 4px dashed #a003f1;
                     }
 
                     .circle-image.system_3 {
+                      border-bottom: 4px dashed #a003f1;
                     }
 
                     .circle-image.system_4 {
+                      border-left: 4px dashed #a003f1;
                     }
+
+
+
 
                     .system-btn {
                       padding: 15px;
@@ -423,8 +432,7 @@
 
       .system-shape-right {
         height: 30%;
-        top: 10%;
-
+        top: 33%;
         img {
 
         }

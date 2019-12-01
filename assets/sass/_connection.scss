@@ -1,53 +1,125 @@
-.connection{
+.connection {
   padding-top: 67px;
   width: 100%;
   height: 100%;
   background-color: $color-dark-blue;
   text-align: center;
-  @include flex(row, nowrap, center, center);
+  @include flex(column, nowrap, center, center);
   overflow: hidden;
-  .connection-box{
+position: relative;
+  .connection-box {
     color: #fff;
-.connection-title{
-  font-family: IRANSans;
-  @include font-source-sans(2rem, #fff, 900, 2.5rem);
-  margin-bottom: 40px;
-}
-    .connection-url{
-      text-align:center;
+
+    .connection-title {
+      font-family: IRANSans;
+      @include font-source-sans(2rem, #fff, 900, 2.5rem);
+      margin-bottom: 40px;
+    }
+
+    .connection-url {
+      text-align: center;
       @include font-source-sans(1.1rem, #fff, 500, 2rem);
       margin: 0 0 30px;
     }
 
-    .connection-phone{
+    .connection-phone {
       @include font-source-sans(1.1rem, #fff, 500, 1.7rem);
       margin: 0 0 10px;
       @include flex(row, nowrap, center, space-between);
     }
-    .connection-email{
+
+    .connection-email {
       @include font-source-sans(1.1rem, #fff, 500, 1.7rem);
       margin: 0 0 30px;
       @include flex(row, nowrap, center, space-between);
     }
-    .connection-connect-telegram{
+
+    .connection-connect-telegram {
       @include font-source-sans(1.1rem, #fff, 500, 1.7rem);
       margin: 0 0 10px;
     }
-    .connection-telegram{
-.icon-telegram{
-  width: 100%;
-  height: auto;
-  max-width: 30px;
-}
+
+    .connection-telegram {
+      .icon-telegram {
+        width: 100%;
+        height: auto;
+        max-width: 30px;
+      }
     }
   }
-  .image{
-    @include flex(row, nowrap, center,center);
+
+  .image {
+    @include flex(row, nowrap, center, center);
     width: 100%;
     height: 100%;
-    img{
+
+    img {
       width: 100%;
-      height:auto;
+      height: auto;
     }
   }
+  .copyright{
+    @include font-source-sans(.8rem, #8e8f9c, 300, 1.7rem);
+    position: absolute;
+    bottom: 0;
+    right:0;
+    width: 100%;
+    text-align: center;
+    align-self: flex-end;
+  }
+}
+
+.connection {
+  @include media-max($M) {
+    padding: 10px 10px 44px 10px;
+    .connection-box {
+
+      .connection-title {
+        margin-bottom: 20px;
+        font-family: IRANSans;
+        @include font-source-sans(1.3rem, #fff, 900, 2rem);
+
+      }
+
+      .connection-url {
+        text-align: center;
+        @include font-source-sans(.88rem, #fff, 500, 2rem);
+        margin: 0 0 20px;
+      }
+
+      .connection-phone {
+        @include font-source-sans(.88rem, #fff, 500, 1.7rem);
+
+        @include flex(row, nowrap, center, space-between);
+      }
+
+      .connection-email {
+        @include font-source-sans(.88rem, #fff, 500, 1.7rem);
+
+        @include flex(row, nowrap, center, space-between);
+      }
+
+      .connection-connect-telegram {
+        @include font-source-sans(.88rem, #fff, 500, 1.7rem);
+
+      }
+
+      .connection-telegram {
+        margin-bottom: 30px;
+
+        .icon-telegram {
+        }
+      }
+    }
+    .image {
+
+      img {
+      }
+    }
+    .copyright{
+      @include font-source-sans(.7rem, #babbc3, 300, 1.4rem);
+      margin: 0;
+    }
+  }
+
 }

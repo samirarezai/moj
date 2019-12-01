@@ -83,3 +83,40 @@
     }
   }
 }
+.box-slider {
+  @include media-max($M){
+
+  .wrap-slider {
+
+    .carousel {
+
+      .carousel-indicators {
+
+      }
+
+      .carousel-inner {
+
+
+        .carousel-item {
+
+
+          .slider-image {
+
+
+            .side-slider-image {
+              width: 100%;
+
+              img {
+              }
+            }
+
+
+          }
+          .carousel-caption {
+          }
+        }
+      }
+    }
+  }
+}
+}
