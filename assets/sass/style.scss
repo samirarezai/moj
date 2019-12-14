@@ -1,19 +1,18 @@
 
 @import "bootstrap-scss/bootstrap";
-@import "../font/css/font-awesome.css";
-@import "../font-persian/iransans/css/fontiran.css";
-@import "mixins";
-@import "variable";
-@import "animate";
-@import "owlCarousel";
-@import "particular";
-@import "full-page";
-@import "magnific-popup";
-@import "public";
-@import "navigation";
-@import "home";
-@import "systems";
-@import "activities";
-@import "slider";
-@import "connection";
+@import "../font-persian/iransans/css/fontiran";
+@import "rtl/mixins";
+@import "rtl/variable";
+@import "rtl/animate";
+@import "rtl/owlCarousel";
+@import "rtl/particular";
+@import "rtl/full-page";
+@import "rtl/magnific-popup";
+@import "rtl/public";
+@import "rtl/navigation";
+@import "rtl/home";
+@import "rtl/systems";
+@import "rtl/activities";
+@import "rtl/slider";
+@import "rtl/connection";
 

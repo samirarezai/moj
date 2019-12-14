@@ -1,0 +1,221 @@
+@import "variable";
+@import "mixins";
+
+.box-home {
+  text-align: right;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+  direction: ltr;
+  .wrap-home {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+
+    .home {
+      position: relative;
+      height: 100%;
+      z-index: 11;
+      @include flex(row, nowrap, center, center);
+
+      .welcome {
+        font-family: aviny, IRANSans_light;
+        @include font-source-sans(5rem, #fff, 500, 5.5rem);
+        text-align: center;
+        margin-bottom: 30px;
+        @include media-max($L) {
+          @include font-source-sans(2.5rem, #fff, 300, 2.5rem);
+          margin-bottom: 20px;
+        }
+      }
+
+      .explain {
+        @include font-source-sans(1.2rem, #fff, 500, 1.9rem);
+        text-align: justify;
+        padding: 5px 15px;
+        @include media-max($L) {
+          @include font-source-sans(1.1rem, #fff, 600, 1.7rem);
+        }
+      }
+
+      .image-logo-card {
+        img {
+          width: 100%;
+          height: auto;
+          max-width: 330px;
+        }
+      }
+    }
+
+    .octagonWrap {
+      width: 120px;
+      height: 120px;
+      float: left;
+      position: absolute;
+      overflow: hidden;
+      z-index: 10;
+      bottom: 20px;
+      left: 120px;
+    }
+
+    .octagon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      transform: rotate(45deg);
+      background: transparent;
+      border: 2px solid $color-violet;
+      &::before {
+        position: absolute;
+        /* There needs to be a negative value here to cancel
+         * out the width of the border. It's currently -3px,
+         * but if the border were 5px, then it'd be -5px.
+         */
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+        transform: rotate(45deg);
+        content: '';
+        border: inherit;
+      }
+    }
+
+    .octagonWrap2 {
+      width: 80px;
+      height: 80px;
+      float: left;
+      position: absolute;
+      overflow: hidden;
+      z-index: 10;
+      bottom: 60px;
+      left: 202px;
+    }
+
+    .octagon2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      transform: rotate(45deg);
+      background: transparent;
+      border: 2px solid #00b6ec;
+
+      &::before {
+        position: absolute;
+        /* There needs to be a negative value here to cancel
+         * out the width of the border. It's currently -3px,
+         * but if the border were 5px, then it'd be -5px.
+         */
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+        @include transform(rotate(45deg));
+        content: '';
+        border: inherit;
+      }
+    }
+
+    .Hexagons {
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      overflow: hidden;
+      z-index: 10;
+      bottom: 12px;
+      right: -25px;
+      @include media-max($L) {
+        bottom: -30px;
+      }
+    }
+
+    .Triangle {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      overflow: hidden;
+      z-index: 10;
+      top: 76px;
+      left: 152px;
+    }
+
+    .home-background {
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      left: 0;
+    }
+  }
+}
+
+.box-home{
+  @include media-max($M){
+    .wrap-home {
+      .home {
+        .welcome {
+          margin: 8% 0;
+        }
+
+        .explain {
+          font-size: .88rem;
+          font-weight: 500;
+        }
+
+        .image-logo-card {
+          img {
+            max-width: 250px;
+          }
+        }
+      }
+
+      .octagonWrap {
+        width: 70px;
+        height: 70px;
+        bottom: 20px;
+        left: -24px;
+      }
+
+      .octagon {
+        &::before {
+        }
+      }
+
+      .octagonWrap2 {
+        width: 50px;
+        height: 50px;
+        bottom: 54px;
+        left: 16px;
+      }
+
+      .octagon2 {
+
+        &::before {
+        }
+      }
+
+      .Hexagons {
+        width: 80px;
+        height: 80px;
+        bottom: -7px;
+        right: -35px;
+      }
+
+      .Triangle {
+        display: none;
+      }
+
+      .home-background {
+      }
+    }
+  }
+}
