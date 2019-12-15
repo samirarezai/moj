@@ -830,8 +830,9 @@
     position: absolute;
     overflow: hidden;
     z-index: 0;
-    bottom: 0px;
+    bottom: 20px;
     right: -10px;
+    @include animations(0, 80s, mspin, infinite, linear);
   }
 
   .octagon {
@@ -870,6 +871,7 @@
     z-index: 0;
     bottom: 100px;
     right: -50px;
+    @include animations(0, 50s, spin, infinite, linear);
   }
 
   .octagon2 {

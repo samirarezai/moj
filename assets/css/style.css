@@ -9691,6 +9691,38 @@ textarea {
   }
 }
 */
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes mspin {
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes mspin {
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes mspin {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
 /*=============key============*/
 /*=============bootstrap============*/
 /*!
@@ -12966,6 +12998,21 @@ textarea {
   right: 0;
 }
 
+#particles_js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #4b579a;
+  background: #191d5d;
+  background: -webkit-linear-gradient(left, #191d5d, #4b579a);
+  background: linear-gradient(to right, #191d5d, #4b579a);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+}
+
 /**
  * fullPage 2.6.6
  * https://github.com/alvarotrigo/fullPage.js
@@ -14011,6 +14058,7 @@ system-shape-left:9
   }
 }
 .navigation .change-language .btn-change-language {
+  text-decoration: none;
   font-size: 1rem;
   color: #000;
   font-weight: 800;
@@ -14097,16 +14145,41 @@ body.fp-viewing-fourthSection .navigation .navbar .navbar-nav .nav-item .nav-lin
   body.fp-viewing-fourthSection .navigation, body.fp-viewing-fourthSection-0 .navigation {
     background-color: #191d48;
   }
+  body.fp-viewing-fourthSection .navigation .nav-link, body.fp-viewing-fourthSection-0 .navigation .nav-link {
+    color: #fff;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  body.fp-viewing-fourthSection .navigation .nav-link, body.fp-viewing-fourthSection-0 .navigation .nav-link {
+    color: #fff;
+  }
 }
 
-body.fp-viewing-fifthSection .navigation, body.fp-viewing-fifthSection-0 .navigation {
-  background-color: #191d48;
+body.fp-viewing-fifthSection .navigation .navbar .navbar-nav .nav-item .nav-link, body.fp-viewing-fifthSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link {
+  color: #191d48;
+}
+@media screen and (max-width: 767px) {
+  body.fp-viewing-fifthSection .navigation .navbar .navbar-nav .nav-item .nav-link, body.fp-viewing-fifthSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link {
+    color: #fff;
+  }
 }
 body.fp-viewing-fifthSection .navigation .navbar .navbar-nav .nav-item .nav-link.fifthSection, body.fp-viewing-fifthSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link.fifthSection {
   color: #d800e3;
 }
 @media screen and (max-width: 767px) {
   body.fp-viewing-fifthSection .navigation, body.fp-viewing-fifthSection-0 .navigation {
+    background-color: #191d48;
+  }
+}
+
+body.fp-viewing-sixthSection .navigation, body.fp-viewing-sixthSection-0 .navigation {
+  background-color: #191d48;
+}
+body.fp-viewing-sixthSection .navigation .navbar .navbar-nav .nav-item .nav-link.sixthSection, body.fp-viewing-sixthSection-0 .navigation .navbar .navbar-nav .nav-item .nav-link.sixthSection {
+  color: #d800e3;
+}
+@media screen and (max-width: 767px) {
+  body.fp-viewing-sixthSection .navigation, body.fp-viewing-sixthSection-0 .navigation {
     background-color: #191d48;
   }
 }
@@ -14128,6 +14201,38 @@ textarea {
   }
 }
 */
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes mspin {
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes mspin {
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes mspin {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
 .box-home {
   text-align: right;
   position: relative;
@@ -14219,6 +14324,34 @@ textarea {
   z-index: 10;
   bottom: 20px;
   left: 120px;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 50s;
+  -webkit-animation-name: mspin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 50s;
+  -moz-animation-name: mspin;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: infinite;
+  -o-animation-delay: 0;
+  -o-animation-duration: 50s;
+  -o-animation-name: mspin;
+  -o-animation-timing-function: linear;
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-duration: 50s;
+  animation-name: mspin;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: infinite;
 }
 .box-home .wrap-home .octagon {
   position: absolute;
@@ -14254,6 +14387,34 @@ textarea {
   z-index: 10;
   bottom: 60px;
   left: 202px;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 35s;
+  -webkit-animation-name: spin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 35s;
+  -moz-animation-name: spin;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: infinite;
+  -o-animation-delay: 0;
+  -o-animation-duration: 35s;
+  -o-animation-name: spin;
+  -o-animation-timing-function: linear;
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-duration: 35s;
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: infinite;
 }
 .box-home .wrap-home .octagon2 {
   position: absolute;
@@ -16320,8 +16481,36 @@ textarea {
   position: absolute;
   overflow: hidden;
   z-index: 0;
-  bottom: 0px;
+  bottom: 20px;
   right: -10px;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 80s;
+  -webkit-animation-name: mspin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 80s;
+  -moz-animation-name: mspin;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: infinite;
+  -o-animation-delay: 0;
+  -o-animation-duration: 80s;
+  -o-animation-name: mspin;
+  -o-animation-timing-function: linear;
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-duration: 80s;
+  animation-name: mspin;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: infinite;
 }
 .box-activities .octagon {
   position: absolute;
@@ -16357,6 +16546,34 @@ textarea {
   z-index: 0;
   bottom: 100px;
   right: -50px;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 50s;
+  -webkit-animation-name: spin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 50s;
+  -moz-animation-name: spin;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: infinite;
+  -o-animation-delay: 0;
+  -o-animation-duration: 50s;
+  -o-animation-name: spin;
+  -o-animation-timing-function: linear;
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-duration: 50s;
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: infinite;
 }
 .box-activities .octagon2 {
   position: absolute;
@@ -16681,6 +16898,400 @@ background: transparent url('../img/eslimi.svg') no-repeat center center;
 }
 }
 */
+.box-team {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.box-team .team {
+  position: relative;
+  height: 100%;
+  height: 70vh;
+  overflow: hidden;
+  margin: 15vh 0;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  z-index: 9;
+}
+@media screen and (max-width: 767px) {
+  .box-team .team {
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+  }
+}
+.box-team .team .team-slider {
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.box-team .team .team-slider .team-title {
+  font-family: aviny;
+  font-size: 7rem;
+  color: #fff;
+  font-weight: 900;
+  line-height: 17rem;
+  margin-bottom: 20px;
+  opacity: 0.2;
+}
+@media screen and (max-width: 767px) {
+  .box-team .team .team-slider .team-title {
+    font-size: 5rem;
+    color: #fff;
+    font-weight: 900;
+    line-height: 14rem;
+  }
+}
+.box-team .team .team-slider .side-team-slider {
+  width: 80%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container {
+  /*   padding-right: 1.3%;
+     padding-left: 1.3%;*/
+  /*    @include media-max($L) {
+        padding-right: 2%;
+        padding-left: 2%;
+      }*/
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .team-item {
+  text-align: center;
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .team-item .teame-image {
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .team-item .teame-image img {
+  border: 2px solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  max-width: 100px;
+  max-height: 100px;
+  width: 100%;
+  height: auto;
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .team-item .team-text {
+  font-family: aviny;
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .team-item .team-text .team-name {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.6rem;
+  margin: 5px 0;
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .team-item .team-text .team-job {
+  font-size: 0.9rem;
+  color: #a1e4fd;
+  font-weight: 300;
+  line-height: 1.6rem;
+  margin: 0;
+}
+@media screen and (max-width: 1200px) {
+  .box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .owl-nav {
+    display: none;
+  }
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .owl-nav .owl-prev {
+  color: #fff;
+  position: absolute;
+  right: -34px;
+  top: calc(50% - 80px);
+  line-height: 0rem;
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .owl-nav .owl-prev img {
+  max-width: 20px;
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .owl-nav .owl-next {
+  color: #fff;
+  position: absolute;
+  left: -34px;
+  top: calc(50% - 80px);
+  line-height: 0rem;
+}
+.box-team .team .team-slider .side-team-slider .owl-carousel-container .team-owl-carousel .owl-nav .owl-next img {
+  max-width: 20px;
+}
+.box-team .octagonWrap {
+  width: 160px;
+  height: 160px;
+  float: right;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  top: 100px;
+  left: -35px;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-name: spin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 30s;
+  -moz-animation-name: spin;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: infinite;
+  -o-animation-delay: 0;
+  -o-animation-duration: 30s;
+  -o-animation-name: spin;
+  -o-animation-timing-function: linear;
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-duration: 30s;
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: infinite;
+}
+.box-team .octagon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background: transparent;
+  border: 2px solid #f500a5;
+}
+.box-team .octagon::before {
+  position: absolute;
+  /* There needs to be a negative value here to cancel
+   * out the width of the border. It's currently -3px,
+   * but if the border were 5px, then it'd be -5px.
+   */
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  transform: rotate(45deg);
+  content: "";
+  border: inherit;
+}
+.box-team .octagonWrap2 {
+  width: 90px;
+  height: 90px;
+  float: right;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  top: 170px;
+  left: -50px;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 40s;
+  -webkit-animation-name: mspin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 40s;
+  -moz-animation-name: mspin;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: infinite;
+  -o-animation-delay: 0;
+  -o-animation-duration: 40s;
+  -o-animation-name: mspin;
+  -o-animation-timing-function: linear;
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-duration: 40s;
+  animation-name: mspin;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: infinite;
+}
+.box-team .octagon2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background: transparent;
+  border: 2px solid #6e157f;
+}
+.box-team .octagon2::before {
+  position: absolute;
+  /* There needs to be a negative value here to cancel
+   * out the width of the border. It's currently -3px,
+   * but if the border were 5px, then it'd be -5px.
+   */
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+  border: inherit;
+}
+.box-team .team-Square {
+  position: absolute;
+  bottom: 50%;
+  right: 90px;
+  width: 0;
+  height: 0;
+  z-index: 0;
+  border-left: 40px solid rgba(241, 198, 255, 0.5);
+  border-bottom: 40px solid transparent;
+  -moz-transform: rotate(9deg);
+  -o-transform: rotate(9deg);
+  -ms-transform: rotate(9deg);
+  -webkit-transform: rotate(9deg);
+  transform: rotate(9deg);
+}
+.box-team .team-Square2 {
+  position: absolute;
+  bottom: 50%;
+  right: 135px;
+  width: 0;
+  height: 0;
+  z-index: 0;
+  border-left: 20px solid rgba(199, 213, 241, 0.5);
+  border-bottom: 20px solid transparent;
+  -moz-transform: rotate(182deg);
+  -o-transform: rotate(182deg);
+  -ms-transform: rotate(182deg);
+  -webkit-transform: rotate(182deg);
+  transform: rotate(182deg);
+}
+.box-team .team-circle {
+  position: absolute;
+  bottom: 57px;
+  right: 40%;
+  width: 15px;
+  height: 15px;
+  z-index: 0;
+  background-color: #e42bff54;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.box-team .team-circle1 {
+  position: absolute;
+  bottom: 39px;
+  right: 41%;
+  width: 35px;
+  height: 35px;
+  z-index: 0;
+  background-color: #afcee270;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.box-team .team-circle2 {
+  position: absolute;
+  bottom: 35px;
+  right: 40%;
+  width: 25px;
+  height: 25px;
+  z-index: 0;
+  background-color: #f8e3ff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
 .box-slider {
   height: 100%;
   width: 100%;
@@ -17044,7 +17655,7 @@ background: transparent url('../img/eslimi.svg') no-repeat center center;
     line-height: 1.7rem;
   }
   .connection .connection-box .connection-telegram {
-    margin-bottom: 5px;
+    margin-bottom: 44px;
   }
   .connection .image {
     margin-bottom: 50px;

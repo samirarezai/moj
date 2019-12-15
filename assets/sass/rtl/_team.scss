@@ -1,0 +1,257 @@
+.box-team {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+
+  .team {
+    position: relative;
+    height: 100%;
+    height: 70vh;
+    overflow: hidden;
+    margin: 15vh 0;
+    @include radius(100px);
+    @include transform(rotate(-2deg));
+    z-index: 9;
+    @include media-max($M) {
+      @include radius(60px);
+    }
+
+    .team-slider {
+      @include transform(rotate(2deg));
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include flex(column, nowrap, center, center);
+
+      .team-title {
+        font-family: aviny;
+        @include font-source-sans(7rem, #fff, 900, 17rem);
+        margin-bottom: 20px;
+        opacity: .2;
+        @include media-max($M) {
+          @include font-source-sans(5rem, #fff, 900, 14rem);
+        }
+      }
+
+      .side-team-slider {
+        width: 80%;
+        @include flex(column, nowrap, center, center);
+
+        .owl-carousel-container {
+          /*   padding-right: 1.3%;
+             padding-left: 1.3%;*/
+          /*    @include media-max($L) {
+                padding-right: 2%;
+                padding-left: 2%;
+              }*/
+
+
+          .team-owl-carousel {
+            .team-item {
+              text-align: center;
+
+              .teame-image {
+                text-align: center;
+                @include flex(column, nowrap, center, center);
+
+                img {
+                  border: 2px solid #fff;
+                  @include radius(50%);
+                  max-width: 100px;
+                  max-height: 100px;
+                  width: 100%;
+                  height: auto;
+                }
+              }
+
+              .team-text {
+                font-family: aviny;
+
+                .team-name {
+                  @include font-source-sans(1.1rem, #fff, 400, 1.6rem);
+                  margin: 5px 0;
+                }
+
+                .team-job {
+                  @include font-source-sans(.9rem, #a1e4fd, 300, 1.6rem);
+                  margin: 0;
+                }
+              }
+            }
+
+            .owl-nav {
+              @include media-max($X) {
+                display: none;
+              }
+
+              .owl-prev {
+                color: #fff;
+                position: absolute;
+                right: -34px;
+                top: calc(50% - 80px);
+                line-height: 0rem;
+
+                img {
+                  max-width: 20px;
+                }
+              }
+
+              .owl-next {
+                color: #fff;
+                position: absolute;
+                left: -34px;
+                top: calc(50% - 80px);
+
+                line-height: 0rem;
+
+                img {
+                  max-width: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .octagonWrap {
+    width: 160px;
+    height: 160px;
+    float: right;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    top: 100px;
+    left: -35px;
+    @include animations(0, 30s, spin, infinite, linear);
+  }
+
+  .octagon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    background: transparent;
+    border: 2px solid $color-violet;
+
+    &::before {
+      position: absolute;
+      /* There needs to be a negative value here to cancel
+       * out the width of the border. It's currently -3px,
+       * but if the border were 5px, then it'd be -5px.
+       */
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
+      transform: rotate(45deg);
+      content: '';
+      border: inherit;
+    }
+  }
+
+  .octagonWrap2 {
+    width: 90px;
+    height: 90px;
+    float: right;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    top: 170px;
+    left: -50px;
+    @include animations(0, 40s, mspin, infinite, linear);
+  }
+
+  .octagon2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    background: transparent;
+    border: 2px solid #6e157f;
+
+    &::before {
+      position: absolute;
+      /* There needs to be a negative value here to cancel
+       * out the width of the border. It's currently -3px,
+       * but if the border were 5px, then it'd be -5px.
+       */
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
+      @include transform(rotate(45deg));
+      content: '';
+      border: inherit;
+    }
+  }
+
+  .team-Square {
+    position: absolute;
+    bottom: 50%;
+    right: 90px;
+    width: 0;
+    height: 0;
+    z-index: 0;
+    border-left: 40px solid rgba(241, 198, 261, .5);
+    border-bottom: 40px solid transparent;
+    @include transform(rotate(9deg));
+  }
+
+  .team-Square2 {
+    position: absolute;
+    bottom: 50%;
+    right: 135px;
+    width: 0;
+    height: 0;
+    z-index: 0;
+    border-left: 20px solid rgba(199, 213, 241, 0.5);
+    border-bottom: 20px solid transparent;
+    @include transform(rotate(182deg));
+  }
+
+  .team-circle {
+    position: absolute;
+    bottom: 57px;
+    right: 40%;
+    width: 15px;
+    height: 15px;
+    z-index: 0;
+    background-color: #e42bff54;
+    @include radius(50%);
+  }
+
+  .team-circle1 {
+    position: absolute;
+    bottom: 39px;
+    right: 41%;
+    width: 35px;
+    height: 35px;
+    z-index: 0;
+    background-color: #afcee270;
+    @include radius(50%);
+  }
+
+  .team-circle2 {
+    position: absolute;
+    bottom: 35px;
+    right: 40%;
+    width: 25px;
+    height: 25px;
+    z-index: 0;
+    background-color: #f8e3ff;
+    @include radius(50%);
+  }
+}
